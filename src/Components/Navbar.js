@@ -56,20 +56,59 @@ export default function Navbar() {
                   </button>
                   <div className="dropdown-content" style={{ left: 0 }}>
                     <ul className="list-group position-absolute">
-                      <li className="list-group-item fs-6 fw-bold p-3">
+                      <li className="list-group-item fs-6 fw-bold p-3 ">
                         New Costumer ?
                         <span className="text-primary ms-5">SignUp</span>
                       </li>
-                      <li className="list-group-item">My Profile</li>
-                      <li className="list-group-item">Flip Cart Plus Zone</li>
-                      <li className="list-group-item">Order</li>
-                      <li className="list-group-item">Wishlist</li>
-                      <li className="list-group-item">Reward</li>
-                      <li className="list-group-item">Giftcard</li>
+                      <li className="list-group-item">
+                        <i
+                          class="fa fa-user-circle me-3 text-primary"
+                          aria-hidden="true"
+                        ></i>
+                        My Profile
+                      </li>
+                      <li className="list-group-item">
+                        <i
+                          class="fa fa-plus me-3 text-primary"
+                          aria-hidden="true"
+                        ></i>
+                        Flip Cart Plus Zone
+                      </li>
+                      <li className="list-group-item">
+                        <i
+                          class="fa fa-cart-arrow-down  me-3 text-primary"
+                          aria-hidden="true"
+                        ></i>
+                        Order
+                      </li>
+                      <li className="list-group-item">
+                        <i
+                          class="fa fa-heart  me-3 text-primary"
+                          aria-hidden="true"
+                        ></i>
+                        Wishlist
+                      </li>
+                      <li className="list-group-item ">
+                        <i
+                          class="fa fa-ticket  me-3 text-primary"
+                          aria-hidden="true"
+                        ></i>
+                        Reward
+                      </li>
+                      <li className="list-group-item">
+                        <i
+                          class="fa fa-gift me-3 text-primary "
+                          aria-hidden="true"
+                        ></i>
+                        Gift Cards
+                      </li>
                     </ul>
                   </div>
                 </div>
               </li>
+
+              {/* /////////////// seller //////////////// */}
+
               <li className="nav-item ">
                 <a className="nav-link text-light fw-bold" href="#">
                   Become a Seller
@@ -84,12 +123,34 @@ export default function Navbar() {
                   </button>
                   <div className="dropdown-content" style={{ left: 0 }}>
                     <ul className="list-group position-absolute">
-                      <li className="list-group-item">
+                      <li className="list-group-item p-3">
+                        <i
+                          class="fa fa-bell text-primary me-3"
+                          aria-hidden="true"
+                        ></i>
                         Notification Preference
                       </li>
-                      <li className="list-group-item">24/7 Customer Care</li>
-                      <li className="list-group-item">Advertise</li>
-                      <li className="list-group-item">Download App</li>
+                      <li className="list-group-item p-3">
+                        <i
+                          class="fa fa-question-circle-o text-primary me-3"
+                          aria-hidden="true"
+                        ></i>
+                        24/7 Customer Care
+                      </li>
+                      <li className="list-group-item p-3">
+                        <i
+                          class="fa fa-line-chart text-primary me-3"
+                          aria-hidden="true"
+                        ></i>
+                        Advertise
+                      </li>
+                      <li className="list-group-item p-3 ">
+                        <i
+                          class="fa fa-download text-primary me-3"
+                          aria-hidden="true"
+                        ></i>
+                        Download App
+                      </li>
                     </ul>
                   </div>
                 </div>
