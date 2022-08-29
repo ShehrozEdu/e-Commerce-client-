@@ -8,7 +8,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
         <div className="container-fluid d-flex w-75">
           <div className="d-flex flex-column me-2">
-            <a className="navbar-brand pb-0 " href="/">
+            <a className="navbar-brand pb-0 " href="#">
               <img
                 src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
                 alt=""
@@ -48,7 +48,7 @@ export default function Navbar() {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0  d-flex align-items-center after-search-Bar-anchor justify-content-evenly w-100">
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0  d-flex align-items-center after-search-Bar-anchor justify-content-evenly w-100 ">
               {/* ///////////////////// Login dropdown/////////////////////////// */}
 
               <li className="nav-item">
@@ -58,9 +58,11 @@ export default function Navbar() {
                   </button>
                   <div className="dropdown-content" style={{ left: 0 }}>
                     <ul className="list-group position-absolute">
-                      <li className="list-group-item fs-6 fw-bold p-3 ">
+                      <li className="list-group-item fs-6 fw-bold p-3 d-flex  align-items-center">
                         New Customer ?
-                        <span className="text-primary ms-5">SignUp</span>
+                        <span className="text-primary ms-5 signUp-underline">
+                          <a>SignUp</a>
+                        </span>
                       </li>
                       <li className="list-group-item">
                         <i
