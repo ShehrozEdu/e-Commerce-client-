@@ -22,7 +22,7 @@ body {
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.234);
 }
 .margin-icons {
-  margin-left: 27.8rem;
+  margin-left: 24rem;
   margin-top: 0.6rem;
   color: #0c73eb;
 }
@@ -84,4 +84,16 @@ a {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+/* 
+--------------------------------
+BelowNavbar 
+-------------------------------- */
+.belowNavP-text {
+  font-size: 0.8rem;
+}
+
+.below-navbar-img img {
+  height: 13vh;
+  width: 6vw;
 }
