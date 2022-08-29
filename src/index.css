@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -15,7 +19,7 @@ body {
   width: 43%;
 }
 .search-Bar-shadow {
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.477);
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.234);
 }
 .margin-icons {
   margin-left: 27.8rem;
@@ -23,7 +27,7 @@ body {
   color: #0c73eb;
 }
 .Login-Button {
-  padding: 0.2rem 10px;
+  padding: 0.3rem 2.4rem;
 }
 .Explore_icon-navbar {
   height: 0.9rem;
@@ -41,6 +45,43 @@ a {
   text-decoration: underline;
 }
 .filpkart-icon {
-  height: 1.8rem;
-  width: 7rem;
+  height: 1.4rem;
+  width: 6rem;
+  margin-right: 0.5rem;
+}
+
+.list-group li:hover {
+  background: rgba(228, 227, 227, 0.327);
+  cursor: pointer;
+}
+
+/* js */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: #f9f9f9;
+  min-width: 24vw;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
 }
