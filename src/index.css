@@ -1,17 +1,12 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-/* Nav Bar */
+/* ////////////////// Nav Bar ////////////////////////*/
+
 .nav-blue {
   background-color: #0c73eb !important;
 }
@@ -23,8 +18,8 @@ code {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.477);
 }
 .margin-icons {
-  margin-left: 38rem;
-  margin-top: 0.5rem;
+  margin-left: 27.8rem;
+  margin-top: 0.6rem;
   color: #0c73eb;
 }
 .Login-Button {
@@ -37,4 +32,15 @@ code {
 }
 .Explore_Plus {
   color: #f8e831;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+.hover-anchor-underline:hover {
+  text-decoration: underline;
+}
+.filpkart-icon {
+  height: 1.8rem;
+  width: 7rem;
 }
