@@ -1,12 +1,16 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.font-size-12 {
+  font-size: 12px;
 }
 
 /* ////////////////// Nav Bar ////////////////////////*/
@@ -16,6 +20,8 @@ body {
 }
 .nav-height {
   height: 10vh;
+  position: sticky !important;
+  width: 100% !important;
 }
 
 .width-Searchbar {
@@ -25,7 +31,7 @@ body {
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.234);
 }
 .margin-icons {
-  margin-left: 28.7vw;
+  margin-left: 28vw;
   margin-top: 0.6rem;
   color: #0c73eb;
 }
@@ -98,11 +104,34 @@ a {
 BelowNavbar 
 -------------------------------- */
 .belowNavP-text {
-  font-size: 0.8rem;
+  font-size: 0.7rem;
 }
 
 .below-navbar-img img {
   height: 13vh;
   width: 6vw;
   cursor: pointer;
+  text-align: center;
+}
+/* 
+--------------------------------
+FOOTER
+-------------------------------- */
+footer {
+  font-size: 12px;
+  line-height: 1.5rem;
+  /* height: 50vh; */
+}
+.footer-text {
+  /* font-size: 12px; */
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+.footer-mail {
+  border-left: 1px solid #454d5e;
+  padding: 0 25px;
+  font-size: 12px !important;
+}
+.footer-last-font {
+  font-size: 1vw;
 }

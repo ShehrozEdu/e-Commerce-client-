@@ -8,7 +8,7 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
         <div className="container-fluid d-flex w-75">
           <div className="d-flex flex-column me-2">
-            <a className="navbar-brand pb-0 " href="#">
+            <a className="navbar-brand pb-0 " href="/">
               <img
                 src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
                 alt=""
