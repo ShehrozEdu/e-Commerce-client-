@@ -59,7 +59,7 @@ export default function Navbar() {
                   <div className="dropdown-content" style={{ left: 0 }}>
                     <ul className="list-group position-absolute">
                       <li className="list-group-item fs-6 fw-bold p-3 ">
-                        New Costumer ?
+                        New Customer ?
                         <span className="text-primary ms-5">SignUp</span>
                       </li>
                       <li className="list-group-item">
