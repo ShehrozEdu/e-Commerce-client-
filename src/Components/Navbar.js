@@ -5,7 +5,7 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 export default function Navbar() {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light nav-blue">
+      <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
         <div className="container-fluid d-flex w-75">
           <div className="d-flex flex-column me-2">
             <a className="navbar-brand pb-0 " href="#">
@@ -17,11 +17,13 @@ export default function Navbar() {
             </a>
             <a className="text-light fst-italic hover-anchor-underline small">
               Explore <span className="Explore_Plus "> Plus</span>
-              <img
-                src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png"
-                alt=""
-                className="Explore_icon-navbar "
-              />
+              <sup>
+                <img
+                  src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/plus_aef861.png"
+                  alt=""
+                  className="Explore_icon-navbar "
+                />
+              </sup>
             </a>
           </div>
 

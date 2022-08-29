@@ -14,6 +14,9 @@ body {
 .nav-blue {
   background-color: #0c73eb !important;
 }
+.nav-height {
+  height: 10vh;
+}
 
 .width-Searchbar {
   width: 43%;
@@ -22,7 +25,7 @@ body {
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.234);
 }
 .margin-icons {
-  margin-left: 24rem;
+  margin-left: 28.7vw;
   margin-top: 0.6rem;
   color: #0c73eb;
 }
@@ -30,9 +33,10 @@ body {
   padding: 0.3rem 2.4rem;
 }
 .Explore_icon-navbar {
-  height: 0.9rem;
-  width: 0.9rem;
+  height: 0.7rem;
+  width: 0.6rem;
   margin-left: 3px;
+  margin-bottom: 3px;
 }
 .Explore_Plus {
   color: #f8e831;
@@ -41,12 +45,16 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+.hover-anchor-underline {
+  font-size: 0.7vw;
+  margin-left: 0.8rem;
+}
 .hover-anchor-underline:hover {
   text-decoration: underline;
 }
 .filpkart-icon {
-  height: 1.4rem;
-  width: 6rem;
+  height: 1.5rem;
+  width: 5.3rem;
   margin-right: 0.5rem;
 }
 
@@ -96,4 +104,5 @@ BelowNavbar
 .below-navbar-img img {
   height: 13vh;
   width: 6vw;
+  cursor: pointer;
 }
