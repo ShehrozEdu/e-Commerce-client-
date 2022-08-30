@@ -7,7 +7,7 @@ export default function Login(props) {
   return (
     <>
       <div
-        className="modal fade"
+        className="modal fade mt-5 z-index-popup"
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"

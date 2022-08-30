@@ -1,3 +1,4 @@
+import { style } from "@mui/system";
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -23,19 +24,18 @@ export default function Banner() {
     <>
       <Carousel
         responsive={responsive}
-        swipeable={false}
+        swipeable={true}
         draggable={true}
         infinite={true}
-        arrows={false}
         autoPlay={true}
-        autoPlaySpeed={2000}
+        autoPlaySpeed={3000}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         containerClass="carousel-container"
-        className="z-index "
+        className=" z-index"
       >
         {bannerData.map((data) => (
-          <img className="banner-img" src={data.url} alt="banner" />
+          <img className="banner-img" src={data.url} alt="baner" />
         ))}
       </Carousel>
     </>
