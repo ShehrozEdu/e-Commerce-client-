@@ -16,7 +16,7 @@ export default function Navbar() {
       ) : (
         <Signup setPage={setPage} page={page} />
       )} */}
-      <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
+      <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height navbar-fixed">
         <div className="container-fluid m-0 p-0 d-flex">
           <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">
             <a className="navbar-brand pb-0 " href="#">

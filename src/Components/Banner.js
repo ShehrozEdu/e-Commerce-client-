@@ -32,7 +32,7 @@ export default function Banner() {
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         containerClass="carousel-container"
-        className="position-relative z-index"
+        className=" z-index"
       >
         {bannerData.map((data) => (
           <img className="banner-img" src={data.url} alt="baner" />

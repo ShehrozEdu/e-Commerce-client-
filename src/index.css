@@ -9,6 +9,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.navbar-fixed {
+  position: fixed;
+  top: 0%;
+  z-index: 10000;
+}
 .font-size-12 {
   font-size: 12px;
 }
@@ -70,9 +75,7 @@ a {
   width: 5.3rem;
   margin-right: 0.5rem;
 }
-.list-group {
-  z-index: 1 !important;
-}
+
 .list-group li:hover {
   background: rgba(228, 227, 227, 0.327);
   cursor: pointer;
@@ -91,11 +94,14 @@ a {
   right: 0;
   background-color: #f9f9f9;
   min-width: 24vw;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1 !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 .z-index {
-  z-index: -1;
+  z-index: 1;
+}
+.z-index-popup {
+  z-index: 100000;
 }
 .form-control {
   box-shadow: none !important;
