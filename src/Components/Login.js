@@ -182,16 +182,19 @@ export default function Login(props) {
                           id="Phone"
                         />
                       </div>
+                      <button className="btn form-login fw-bold shadow col-12 py-2">
+                        Continue
+                      </button>
                       <button
-                        className="btn form-login fw-bold shadow col-12 py-2"
+                        className="btn text-primary mt-3 border Existing-User col-12 py-2"
                         onClick={() => setPage(true)}
                       >
-                        Continue
+                        Existing User? Login
                       </button>
                     </form>
                   </section>
                 </div>
-              )}{" "}
+              )}
             </div>
           </div>
         </div>
