@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Login(props) {
+export default function Login() {
   let [page, setPage] = useState(true);
 
   return (
