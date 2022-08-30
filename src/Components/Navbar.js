@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Login from "./Login";
+import Signup from "./Signup";
 
 export default function Navbar() {
   return (
     <>
       {/* MOdal Login */}
+      {/* <Login setPage={setPage} />
+      <Signup setPage={setPage} /> */}
       <Login />
+      {/* {page === true ? (
+        <Login setPage={setPage} page={page} />
+      ) : (
+        <Signup setPage={setPage} page={page} />
+      )} */}
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
         <div className="container-fluid m-0 p-0 d-flex">
           <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">

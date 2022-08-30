@@ -70,7 +70,9 @@ a {
   width: 5.3rem;
   margin-right: 0.5rem;
 }
-
+.list-group {
+  z-index: 1 !important;
+}
 .list-group li:hover {
   background: rgba(228, 227, 227, 0.327);
   cursor: pointer;
@@ -90,9 +92,14 @@ a {
   background-color: #f9f9f9;
   min-width: 24vw;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
+  z-index: 1 !important;
 }
-
+.z-index {
+  z-index: -1;
+}
+.form-control {
+  box-shadow: none !important;
+}
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -160,6 +167,33 @@ CartFooter
 }
 .copyrightCart {
   margin-left: 25px;
+}
+
+.form-control {
+  border-radius: 0;
+}
+.terms-condition {
+  font-size: 0.8rem;
+}
+.form-login {
+  background-color: #fb641b;
+  color: #f1f1f1;
+}
+.form-login:hover {
+  color: white !important;
+}
+/*//////////////// Banner ////////////////////*/
+
+.banner-img {
+  width: 100vw;
+  height: 40vh;
+}
+.create-account {
+  margin-top: 5rem;
+  cursor: pointer;
+}
+.create-account:active {
+  color: rgb(115, 166, 255) !important;
 }
 /* 
 -------------------------------------------------------
@@ -240,4 +274,3 @@ Media Queries for small screen
 .Login-email-logo {
   margin-top: 25vh;
 }
-
