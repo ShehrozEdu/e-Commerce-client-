@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { style } from "@mui/system";
 
-export default function Login() {
+export default function Login(props) {
   let [page, setPage] = useState(true);
 
   return (
@@ -27,9 +28,13 @@ export default function Login() {
             <div className="row">
               <div className="col-5">
                 <section className="nav-blue p-5 text-light">
-                  <h2 className="fw-bold fs-3">Login</h2>
-                  <p className="col-10 py-3 fs-5">
-                    Get access to your Orders, Wishlist and Recommendations
+                  <h2 className="fw-bold fs-3">
+                    {page === true ? "Login" : "Looks like you're new here!"}
+                  </h2>
+                  <p className="col-12 py-3 small fs-5">
+                    {page === true
+                      ? "Get access to your Orders, Wishlist and Recommendations"
+                      : "Sign up with your mobile number to get started"}
                   </p>
                   <div className="Login-email-logo">
                     <img

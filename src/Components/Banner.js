@@ -24,17 +24,18 @@ export default function Banner() {
       <Carousel
         responsive={responsive}
         swipeable={false}
-        draggable={false}
+        draggable={true}
         infinite={true}
+        arrows={false}
         autoPlay={true}
-        autoPlaySpeed={3000}
+        autoPlaySpeed={2000}
         dotListClass="custom-dot-list-style"
         itemClass="carousel-item-padding-40-px"
         containerClass="carousel-container"
-        className="position-relative z-index"
+        className="z-index "
       >
         {bannerData.map((data) => (
-          <img className="banner-img " src={data.url} alt="baner" />
+          <img className="banner-img" src={data.url} alt="banner" />
         ))}
       </Carousel>
     </>

@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Navbar />
       <BelowNavbar />
-      <Banner/>
+      <Banner />
       <MostSearched />
       <Footer />
-      {/* <CartFooter /> */}
+      <CartFooter />
     </div>
   );
 }

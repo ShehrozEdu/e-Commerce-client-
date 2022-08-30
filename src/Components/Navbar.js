@@ -65,15 +65,14 @@ export default function Navbar() {
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
                   <button
-                    className="btn btn-light Login-Button text-primary fw-bold dropbtn"
+                    className="btn btn-light Login-Button text-primary fw-bold dropbtn position-relative"
                     data-bs-toggle="modal"
                     data-bs-target="#staticBackdrop"
                   >
                     Login
                   </button>
-
-                  <div className="dropdown-content " style={{ left: -90 }}>
-                    <ul className="list-group position-absolute ">
+                  <div className="dropdown-content" style={{ left: -90 }}>
+                    <ul className="list-group position-absolute z-index">
                       <i
                         class="fa-solid fa-caret-up mt-2 "
                         style={{
