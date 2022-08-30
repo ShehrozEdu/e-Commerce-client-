@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
-        <div className="container-fluid d-flex w-75">
-          <div className="d-flex flex-column me-2">
+        <div className="container-fluid m-0 p-0 d-flex">
+          <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">
             <a className="navbar-brand pb-0 " href="#">
               <img
                 src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
@@ -56,8 +56,19 @@ export default function Navbar() {
                   <button className="btn btn-light Login-Button text-primary fw-bold dropbtn">
                     Login
                   </button>
-                  <div className="dropdown-content" style={{ left: 0 }}>
-                    <ul className="list-group position-absolute">
+
+                  <div className="dropdown-content " style={{ left: -90 }}>
+                    <ul className="list-group position-absolute ">
+                      <i
+                        class="fa-solid fa-caret-up mt-2 "
+                        style={{
+                          background: "transparent",
+                          color: "white",
+                          fontSize: 30,
+                          lineHeight: 0,
+                          marginLeft: 140,
+                        }}
+                      ></i>
                       <li className="list-group-item fs-6 fw-bold p-3 d-flex  align-items-center">
                         New Customer ?
                         <span className="text-primary ms-5 signUp-underline">
@@ -76,7 +87,7 @@ export default function Navbar() {
                           class="fa fa-plus me-3 text-primary"
                           aria-hidden="true"
                         ></i>
-                        Flip Cart Plus Zone
+                        FlipKart Plus Zone
                       </li>
                       <li className="list-group-item">
                         <i
@@ -114,7 +125,10 @@ export default function Navbar() {
               {/* /////////////// seller //////////////// */}
 
               <li className="nav-item ">
-                <a className="nav-link text-light fw-bold" href="#">
+                <a
+                  className="nav-link text-lg-light text-black-50 fw-bold"
+                  href="#"
+                >
                   Become a Seller
                 </a>
               </li>
@@ -122,11 +136,21 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
-                  <button className="btn  text-light fw-bold dropbtn">
+                  <button className="btn  text-lg-light text-black-50 fw-bold dropbtn">
                     More <KeyboardArrowDownOutlinedIcon />
                   </button>
-                  <div className="dropdown-content" style={{ left: 0 }}>
+                  <div className="dropdown-content" style={{ left: -90 }}>
                     <ul className="list-group position-absolute">
+                      <i
+                        class="fa-solid fa-caret-up mt-2 "
+                        style={{
+                          background: "transparent",
+                          color: "white",
+                          fontSize: 30,
+                          lineHeight: 0,
+                          marginLeft: 110,
+                        }}
+                      ></i>
                       <li className="list-group-item p-3">
                         <i
                           class="fa fa-bell text-primary me-3"
@@ -162,7 +186,7 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <a
-                  className="nav-link text-light fw-bold"
+                  className="nav-link text-lg-light text-black-50 fw-bold"
                   href="#"
                   tabIndex="-1"
                 >

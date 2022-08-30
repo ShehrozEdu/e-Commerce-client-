@@ -3,7 +3,7 @@ import React from "react";
 export default function MostSearched() {
   return (
     <>
-      <div className="col-lg-11 ms-5 p-2 mt-5">
+      <div className="col-lg-11 col-11  ms-lg-5  p-2 mt-5">
         <div className="mb-2">
           <span className="text-muted fw-bold">Top Stories</span>:
           <a className="fw-bold text-muted " href="#">

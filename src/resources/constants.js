@@ -33,7 +33,7 @@ export const navData = [
   },
   {
     url: "https://rukminim1.flixcart.com/flap/128/128/image/dff3f7adcf3a90c6.png?q=100",
-    text: "Beauty, Toys & More",
+    text: "Toys & More",
   },
 ];
 

@@ -18,6 +18,9 @@ body {
 .nav-blue {
   background-color: #0c73eb !important;
 }
+.margin-nav {
+  margin-left: 11rem !important;
+}
 .nav-height {
   height: 10vh;
   position: sticky !important;
@@ -25,19 +28,20 @@ body {
 }
 
 .width-Searchbar {
-  width: 43%;
+  width: 30%;
 }
 .search-Bar-shadow {
   box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.234);
 }
 .margin-icons {
-  margin-left: 28vw;
+  margin-left: 26vw;
   margin-top: 0.6rem;
   color: #0c73eb;
 }
 .Login-Button {
   padding: 0.3rem 2.4rem;
 }
+
 .Explore_icon-navbar {
   height: 0.7rem;
   width: 0.6rem;
@@ -123,6 +127,7 @@ FOOTER
 footer {
   font-size: 12px;
   line-height: 1.5rem;
+
   /* height: 50vh; */
 }
 .footer-text {
@@ -137,4 +142,97 @@ footer {
 }
 .footer-last-font {
   font-size: 1vw;
+}
+
+/* -------------------------------------------------------
+
+CartFooter
+
+------------------------------------------------------- */
+.cart-footer {
+  margin: 0, auto;
+  padding: 25px;
+  width: 90%;
+}
+.cart-footer a {
+  padding: 0 5px;
+  border-right: 1px solid #878787;
+}
+.copyrightCart {
+  margin-left: 25px;
+}
+/* 
+-------------------------------------------------------
+
+Media Queries for small screen
+
+------------------------------------------------------- */
+
+@media only screen and (max-width: 508px) {
+  .navbar-brand {
+    margin-left: 1rem;
+  }
+  .filpkart-icon {
+    width: 12vw;
+    height: 3vh;
+  }
+  .hover-anchor-underline {
+    font-size: 1.3vw;
+    margin-left: 1.3rem;
+  }
+  .width-Searchbar {
+    width: 45%;
+  }
+  .search-Bar-shadow {
+    margin: 0 !important;
+    padding: 0.3rem !important;
+    /* width: 0vw !important; */
+  }
+  .navbar-toggler {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+  }
+  .margin-nav {
+    margin-left: 0 !important;
+  }
+  .margin-icons {
+    margin-left: 40vw;
+    margin-top: 0.7rem;
+    font-size: 1rem !important;
+  }
+  .dropdown-content {
+    right: 0 !important;
+
+    box-shadow: #454d5e !important;
+    box-shadow: #454d5e !important;
+    position: absolute;
+  }
+  .below-navbar-img {
+    height: 10vh !important;
+  }
+  .below-navbar-img img {
+    height: 9vh;
+    width: 7vw;
+    margin-left: 0 !important;
+    cursor: pointer;
+    text-align: center;
+  }
+  .belowNavP-text {
+    /* margin-left: 20px; */
+    font-size: 0.5rem;
+  }
+  .footer-last-font {
+    font-size: 10px;
+  }
+  .footer-img {
+    display: none;
+  }
+  .footer-mail {
+    border-left: none;
+  }
+  .after-search-Bar-anchor {
+    background-color: #2757bd;
+  }
 }

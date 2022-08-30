@@ -5,7 +5,7 @@ import { navData } from "../resources/constants";
 export default function BelowNavbar() {
   return (
     <>
-      <div className=" mx-1 pt-2">
+      <div className=" mx-lg-1 mx-0 pt-2">
         <div className="below-navbar-img d-flex justify-content-evenly col-12 m-0  bg-light shadow  ">
           {navData.map((data) => (
             <div className="col-1  d-flex flex-column text-center ">
