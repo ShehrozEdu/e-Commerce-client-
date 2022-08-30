@@ -1,10 +1,13 @@
 import React from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
+import Login from "./Login";
 
 export default function Navbar() {
   return (
     <>
+      {/* MOdal Login */}
+      <Login />
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height">
         <div className="container-fluid m-0 p-0 d-flex">
           <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">
@@ -53,7 +56,11 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
-                  <button className="btn btn-light Login-Button text-primary fw-bold dropbtn">
+                  <button
+                    className="btn btn-light Login-Button text-primary fw-bold dropbtn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
                     Login
                   </button>
 
@@ -125,10 +132,7 @@ export default function Navbar() {
               {/* /////////////// seller //////////////// */}
 
               <li className="nav-item ">
-                <a
-                  className="nav-link text-lg-light text-black-50 fw-bold"
-                  href="#"
-                >
+                <a className="nav-link text-light fw-bold" href="#">
                   Become a Seller
                 </a>
               </li>
@@ -136,7 +140,7 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
-                  <button className="btn  text-lg-light text-black-50 fw-bold dropbtn">
+                  <button className="btn  text-light fw-bold dropbtn">
                     More <KeyboardArrowDownOutlinedIcon />
                   </button>
                   <div className="dropdown-content" style={{ left: -90 }}>
@@ -186,7 +190,7 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <a
-                  className="nav-link text-lg-light text-black-50 fw-bold"
+                  className="nav-link text-light  fw-bold"
                   href="#"
                   tabIndex="-1"
                 >

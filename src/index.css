@@ -233,6 +233,13 @@ Media Queries for small screen
     border-left: none;
   }
   .after-search-Bar-anchor {
-    background-color: #2757bd;
+    background-color: #0c73eb;
   }
+}
+/* Login popup */
+.Login-email-logo {
+  margin-top: 25vh;
+}
+form label {
+  border-radius: 0 !important;
 }
