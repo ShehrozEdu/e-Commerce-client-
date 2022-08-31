@@ -68,6 +68,26 @@ export const dealData = [
     tagline: "Deal of the day",
   },
   {
+    id: "product1",
+    url: "https://rukminim1.flixcart.com/image/200/200/khf63680/cases-covers/back-cover/d/7/g/spigen-acs02256-original-imafxfgbffqaugur.jpeg?q=70",
+    detailUrl: "",
+    title: {
+      shortTitle: "Mobile Covers",
+    },
+    discount: "Extra 10% Off",
+    tagline: "Deal of the day",
+  },
+  {
+    id: "product1",
+    url: "https://rukminim1.flixcart.com/image/200/200/khf63680/cases-covers/back-cover/d/7/g/spigen-acs02256-original-imafxfgbffqaugur.jpeg?q=70",
+    detailUrl: "",
+    title: {
+      shortTitle: "Mobile Covers",
+    },
+    discount: "Extra 10% Off",
+    tagline: "Deal of the day",
+  },
+  {
     id: "product2",
     url: "https://rukminim1.flixcart.com/image/200/200/k5lcvbk0/moisturizer-cream/9/w/g/600-body-lotion-aloe-hydration-for-normal-skin-nivea-lotion-original-imafz8jb3ftt8gf9.jpeg?q=70",
     title: {

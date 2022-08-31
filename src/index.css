@@ -205,7 +205,23 @@ CartFooter
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.341);
   font-weight: 500;
 }
+
+.view-btn-width {
+  width: 10vw;
+}
+.best-of-font {
+  font-size: 1.3rem;
+}
+.productCarousel-img {
+  width: 10vw;
+  height: 25vh;
+}
+.adv-width {
+  width: 15vw;
+  height: 65vh;
+}
 /* 
+
 -------------------------------------------------------
 
 Media Queries for small screen

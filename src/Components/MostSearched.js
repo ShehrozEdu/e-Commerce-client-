@@ -11,383 +11,383 @@ export default function MostSearched() {
           </a>
         </div>
         <div>
-          <span className="text-muted fw-bold">
-            MOST SEARCHED FOR ON FLIPKART:
+          <span className="text-muted fw-bold small  ">
+            MOST SEARCHED FOR ON FLIPKART :
           </span>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno7 Pro 5G
-          </a>
-        </div>
-        <div className="mt-3">
-          <span className="text-muted fw-bold">Mobile Phones:</span>
-          <a href="#" className="text-muted ms-1">
-            Bounce Infinity E1|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Google Pixel 6A|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            vivo T1X|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno8 5G|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno8 Pro 5G|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Nothing Phone 1|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Sell Old Mobile Phones|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Electronics Store|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Samsung Window AC|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno7 Pro 5G
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Bounce Infinity E1|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Google Pixel 6A|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            vivo T1X|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno8 5G|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno8 Pro 5G|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Nothing Phone 1|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Sell Old Mobile Phones|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Electronics Store|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Samsung Window AC|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno7 Pro 5G
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Bounce Infinity E1|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Google Pixel 6A|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            vivo T1X|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno8 5G|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            OPPO Reno8 Pro 5G|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Nothing Phone 1|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Sell Old Mobile Phones|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Electronics Store|
-          </a>
-          <a href="#" className="text-muted ms-1">
-            Samsung Window AC|
-          </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
         </div>
         <div className="mt-3">
-          <span className="text-muted fw-bold">CAMERA:</span>
-          <a href="#" className="text-muted ms-1">
+          <span className="text-muted fw-bold small">Mobile Phones :</span>
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
         </div>
         <div className="mt-3">
-          <span className="text-muted fw-bold">LAPTOP:</span>
-          <a href="#" className="text-muted ms-1">
+          <span className="text-muted fw-bold small">CAMERA :</span>
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Bounce Infinity E1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Google Pixel 6A|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             vivo T1X|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno8 Pro 5G|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Nothing Phone 1|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Sell Old Mobile Phones|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Electronics Store|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
             Samsung Window AC|
           </a>
-          <a href="#" className="text-muted ms-1">
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno7 Pro 5G
+          </a>
+        </div>
+        <div className="mt-3">
+          <span className="text-muted fw-bold small">LAPTOP :</span>
+          <a href="#" className="text-muted small ms-1">
+            Bounce Infinity E1|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Google Pixel 6A|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            vivo T1X|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno8 5G|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno8 Pro 5G|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Nothing Phone 1|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Sell Old Mobile Phones|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Electronics Store|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Samsung Window AC|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno7 Pro 5G
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Bounce Infinity E1|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Google Pixel 6A|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            vivo T1X|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno8 5G|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno8 Pro 5G|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Nothing Phone 1|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Sell Old Mobile Phones|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Electronics Store|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Samsung Window AC|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno7 Pro 5G
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Bounce Infinity E1|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Google Pixel 6A|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            vivo T1X|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno8 5G|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            OPPO Reno8 Pro 5G|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Nothing Phone 1|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Sell Old Mobile Phones|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Electronics Store|
+          </a>
+          <a href="#" className="text-muted small ms-1">
+            Samsung Window AC|
+          </a>
+          <a href="#" className="text-muted small ms-1">
             OPPO Reno7 Pro 5G
           </a>
         </div>
         <div className="text-muted">
-          <h4 className="mt-3 fw-bold">
+          <h5 className="mt-3 fw-bold">
             Flipkart: The One-stop Shopping Destination
-          </h4>
+          </h5>
           E-commerce is revolutionizing the way we all shop in India. Why do you
           want to hop from one store to another in search of the latest phone
           when you can find it on the Internet in a single click? Not only
@@ -402,7 +402,7 @@ export default function MostSearched() {
           instruments, we got them all covered. You name it, and you can stay
           assured about finding them all here. For those of you with erratic
           working hours, Flipkart is your best bet. Shop in your PJs, at night
-          or in the wee hours of the morning. This e-commerce never shuts down.{" "}
+          or in the wee hours of the morning. This e-commerce never shuts down.
           <br />
           <br />
           What's more, with our year-round shopping festivals and events, our
@@ -476,7 +476,7 @@ export default function MostSearched() {
           again find the need to run around service centres. This plan entails
           you to a number of post-purchase solutions, starting at as low as
           Rupees 99 only! Broken screens, liquid damage to phone, hardware and
-          software glitches, and replacements -{" "}
+          software glitches, and replacements -
           <b>the Flipkart Complete Mobile Protection</b> covers a comprehensive
           range of post-purchase problems, with door-to-door services. <br />
           <br />
@@ -518,14 +518,14 @@ export default function MostSearched() {
           <br />
           <h4 className="fw-bold">Large Appliances</h4>Sleek TVs, power-saving
           refrigerators, rapid-cooling ACs, resourceful washing machines -
-          discover everything you need to run a house under one roof. Our{" "}
+          discover everything you need to run a house under one roof. Our
           <b>Dependable TV and Appliance Store</b> ensures zero transit damage,
           with a replacement guarantee if anything goes wrong; delivery and
           installation as per your convenience and a double warranty (Official
           Brand Warranty along with an extended Flipkart Warranty) - rest
           assured, value for money is what is promised and delivered. Shop from
           market leaders in the country like Samsung, LG, Whirlpool, Midea, Mi,
-          Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.{" "}
+          Vu, Panasonic, Godrej, Sony, Daikin, and Hitachi among many others.
           <br />
           <br />
           <h4 className="fw-bold">Small Home Appliances</h4>Find handy and
@@ -536,7 +536,7 @@ export default function MostSearched() {
           appliances at home.
           <br />
           <br />
-          <h4 className="fw-bold">Lifestyle</h4>Flipkart,{" "}
+          <h4 className="fw-bold">Lifestyle</h4>Flipkart,
           <b>'India ka Fashion Capital'</b>, is your one-stop fashion
           destination for anything and everything you need to look good. Our
           exhaustive range of Western and Indian wear, summer and winter
@@ -560,7 +560,7 @@ export default function MostSearched() {
           everything again. With the hundreds of options thrown at you, the ride
           could be overwhelming. What place is reliable, what furniture will
           stand the test of time? These are questions you must ask before you
-          choose a store. Well, our <b>Durability Certified Furniture Store</b>{" "}
+          choose a store. Well, our <b>Durability Certified Furniture Store</b>
           has not only curated a range of furniture keeping in mind the modern
           Indian consumer but furniture that comes with a lab certification,
           ensuring they last you for up to 10 years. Yes, all our furniture has

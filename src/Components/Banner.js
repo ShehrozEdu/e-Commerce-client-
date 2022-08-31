@@ -22,22 +22,24 @@ const responsive = {
 export default function Banner() {
   return (
     <>
-      <Carousel
-        responsive={responsive}
-        swipeable={true}
-        draggable={true}
-        infinite={true}
-        autoPlay={true}
-        autoPlaySpeed={3000}
-        dotListClass="custom-dot-list-style"
-        itemClass="carousel-item-padding-40-px"
-        containerClass="carousel-container"
-        className=" z-index"
-      >
-        {bannerData.map((data) => (
-          <img className="banner-img" src={data.url} alt="baner" />
-        ))}
-      </Carousel>
+      <div className="mx-3">
+        <Carousel
+          responsive={responsive}
+          swipeable={true}
+          draggable={true}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={3000}
+          dotListClass="custom-dot-list-style"
+          itemClass="carousel-item-padding-40-px"
+          containerClass="carousel-container"
+          className=" z-index"
+        >
+          {bannerData.map((data) => (
+            <img className="banner-img" src={data.url} alt="baner" />
+          ))}
+        </Carousel>
+      </div>
     </>
   );
 }

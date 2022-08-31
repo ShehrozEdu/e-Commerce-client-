@@ -118,7 +118,7 @@ export default function Login(props) {
                           type="text"
                           className="form-control border-0 border-bottom border-primary  p-0"
                           id="First_Name"
-                          aria-describedby="emailHelp"
+                          aria-describedby="firstName"
                         />
                       </div>
                       <div className="mb-3">
