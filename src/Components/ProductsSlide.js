@@ -68,7 +68,7 @@ export default function ProductsSlide({ time, title }) {
               <div className="p-3">
                 <img
                   src={product.url}
-                  className=" productCarousel-img"
+                  className=" productCarousel-img "
                   alt=""
                 />
                 <p className=" mt-2 ms-2">{product.discount}</p>

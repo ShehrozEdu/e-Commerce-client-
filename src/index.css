@@ -215,6 +215,7 @@ CartFooter
 .productCarousel-img {
   width: 10vw;
   height: 25vh;
+  cursor: pointer !important;
 }
 .adv-width {
   width: 15vw;
