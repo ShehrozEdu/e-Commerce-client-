@@ -189,7 +189,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <a
                   className="nav-link text-light  fw-bold"
-                  href="#"
+                  href="/cart"
                   tabIndex="-1"
                 >
                   <i
