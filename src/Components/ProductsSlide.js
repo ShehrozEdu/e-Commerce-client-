@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import { dealData } from "../resources/constants";
 import Countdown from "react-countdown";
-export default function ProductsSlide({ time }) {
+export default function ProductsSlide({ time, title }) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -30,7 +30,7 @@ export default function ProductsSlide({ time }) {
         <div className="ms-3 d-flex justify-content-between align-items-center ">
           <div className="mt-3 d-flex ">
             <div>
-              <h5 className="best-of-font">Best of Electronics</h5>
+              <h5 className="best-of-font">{title}</h5>
 
               <h4 className="text-muted small">Best of electronics</h4>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 // import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
-import { navData } from "../resources/constants";
+import { navData } from "../../resources/constants";
 
 export default function BelowNavbar() {
   return (

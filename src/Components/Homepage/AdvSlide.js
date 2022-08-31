@@ -1,12 +1,12 @@
 import React from "react";
-import ProductsSlide from "./ProductsSlide";
+import ProductsSlide from "../ProductsSlide";
 
-export default function AdvSlide({ time }) {
+export default function AdvSlide({ time, title }) {
   return (
     <>
       <div className="col-12 d-flex">
         <div className="col-10">
-          <ProductsSlide time={true} />
+          <ProductsSlide time={true} title="Deal of the day" />
         </div>
         <div className="col-2 mt-4 p-2 shadow bg-white">
           <img

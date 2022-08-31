@@ -1,5 +1,5 @@
 import React from "react";
-import Footer from "./../Footer";
+import Footer from "../Homepage/Footer";
 
 export default function ProductsDetails() {
   return (
@@ -16,10 +16,10 @@ export default function ProductsDetails() {
             </div>
           </div>
           <div className="d-flex justify-content-center mt-3">
-            <button className="btn btn-warning py-3 px-3 font-product-btn cart-btn">
+            <button className="btn  py-3 px-2 font-product-btn cart-btn">
               <i class="fa-solid fa-cart-shopping me-2"></i>ADD TO CART
             </button>
-            <button className="btn text-light ms-5 px-5 font-product-btn bolt-btn">
+            <button className="btn text-light ms-5 px-3 font-product-btn bolt-btn">
               <i class="fa-solid fa-bolt me-2"></i>BUY NOW
             </button>
           </div>
