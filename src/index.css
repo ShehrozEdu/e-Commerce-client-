@@ -300,3 +300,26 @@ Media Queries for small screen
 .Login-email-logo {
   margin-top: 25vh;
 }
+.test-fixed {
+  left: 5%;
+}
+.font-product-btn {
+  font-size: 0.9rem;
+}
+.cart-btn {
+  background-color: #ff9f00;
+  color: white;
+}
+.bolt-btn {
+  background-color: #fb641b;
+}
+.custom-product-image {
+  height: 60vh;
+  width: 28vw;
+}
+.flip-assured-icon {
+  height: 1.2rem;
+}
+.marginHR {
+  margin-top: 32px !important;
+}

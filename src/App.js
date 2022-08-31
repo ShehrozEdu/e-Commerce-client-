@@ -7,6 +7,7 @@ import CartFooter from "./Components/CartFooter";
 import Banner from "./Components/Banner";
 import ProductsSlide from "./Components/ProductsSlide";
 import AdvSlide from "./Components/AdvSlide";
+import ProductsDetails from "./Components/Products/ProductsDetails";
 
 function App() {
   return (
@@ -19,7 +20,8 @@ function App() {
       <ProductsSlide time={false} />
       <MostSearched />
       <Footer />
-      <CartFooter />
+      {/* <CartFooter />  */}
+      {/* <ProductsDetails /> */}
     </div>
   );
 }
