@@ -5,9 +5,25 @@ import Login from "./Login";
 import { Link } from "react-router-dom";
 
 export default function Navbar() {
+  const initialSignUpValues = {
+    firstName: "",
+    lastName: "",
+    userName: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+  };
+  let [page, setPage] = useState(true);
+  let [signUp, setSignUp] = useState(initialSignUpValues);
+
   return (
     <>
-      <Login />
+      <Login
+        page={page}
+        signUp={signUp}
+        setSignUp={setSignUp}
+        setPage={setPage}
+      />
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height navbar-fixed">
         <div className="container-fluid m-0 p-0 d-flex">
           <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">
@@ -81,6 +97,7 @@ export default function Navbar() {
                           <a
                             data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop"
+                            onClick={() => setPage(false)}
                           >
                             SignUp
                           </a>

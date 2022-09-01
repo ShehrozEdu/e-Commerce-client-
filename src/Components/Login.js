@@ -1,20 +1,7 @@
 import React, { useState } from "react";
 import { authenticateSignup } from "../Components/Users/api";
 
-export default function Login(props) {
-  let { signUpPage } = props;
-  const initialSignUpValues = {
-    firstName: "",
-    lastName: "",
-    userName: "",
-    email: "",
-    password: "",
-    phoneNumber: "",
-  };
-
-  let [page, setPage] = useState(true);
-  let [signUp, setSignUp] = useState(initialSignUpValues);
-
+export default function Login({ page, setPage, signUp, setSignUp }) {
   let SignupInputData = (event) => {
     setSignUp({ ...signUp, [event.target.name]: event.target.value });
     // console.log(signUp);
@@ -124,7 +111,7 @@ export default function Login(props) {
                   </section>
                 </div>
               ) : (
-                <div className="col-7 pt-0">
+                <div className="col-7 pt-0 mt-3">
                   <section className=" text-dark py-5  pt-3 p-2 px-3">
                     {/* <form className="col-11"> */}
                     <div className="mb-3">
