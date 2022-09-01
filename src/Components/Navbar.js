@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Login from "./Login";
 import { Link } from "react-router-dom";
+import { DataContext } from "./Context/ContextApi";
 
 export default function Navbar() {
   const initialSignUpValues = {
@@ -13,9 +14,14 @@ export default function Navbar() {
     password: "",
     phoneNumber: "",
   };
+  const initialLoginValues = {
+    email: "",
+    password: "",
+  };
   let [page, setPage] = useState(true);
   let [signUp, setSignUp] = useState(initialSignUpValues);
-
+  let { account } = useContext(DataContext);
+  let [login, setLogin] = useState(initialLoginValues);
   return (
     <>
       <Login
@@ -23,6 +29,8 @@ export default function Navbar() {
         signUp={signUp}
         setSignUp={setSignUp}
         setPage={setPage}
+        login={login}
+        setLogin={setLogin}
       />
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height navbar-fixed">
         <div className="container-fluid m-0 p-0 d-flex">
@@ -72,13 +80,19 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
-                  <button
-                    className="btn btn-light Login-Button text-primary fw-bold dropbtn position-relative"
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop"
-                  >
-                    Login
-                  </button>
+                  {account ? (
+                    <button className="btn btn-light Login-Button text-primary fw-bold dropbtn position-relative">
+                      {account}
+                    </button>
+                  ) : (
+                    <button
+                      className="btn btn-light Login-Button text-primary fw-bold dropbtn position-relative"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
+                    >
+                      Login
+                    </button>
+                  )}
                   <div className="dropdown-content" style={{ left: -90 }}>
                     <ul className="list-group position-absolute z-index">
                       <i
@@ -145,6 +159,20 @@ export default function Navbar() {
                         ></i>
                         Gift Cards
                       </li>
+                      {account ? (
+                        <li
+                          className="list-group-item"
+                          onClick={() => window.location.reload()}
+                        >
+                          <i
+                            className="fa fa-sign-out me-3 text-primary"
+                            aria-hidden="true"
+                          ></i>
+                          Logout
+                        </li>
+                      ) : (
+                        ""
+                      )}
                     </ul>
                   </div>
                 </div>

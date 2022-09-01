@@ -1,15 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { authenticateSignup } from "../Components/Users/api";
+import { DataContext } from "./Context/ContextApi";
 
-export default function Login({ page, setPage, signUp, setSignUp }) {
+export default function Login({
+  page,
+  setPage,
+  signUp,
+  setSignUp,
+  setLogin,
+  login,
+}) {
+  const { setAccount } = useContext(DataContext);
   let SignupInputData = (event) => {
     setSignUp({ ...signUp, [event.target.name]: event.target.value });
     // console.log(signUp);
   };
   let userSignUpData = async () => {
-    let response = await authenticateSignup(signUp);
+    await authenticateSignup(signUp);
+    setAccount(signUp.userName);
   };
 
+  let loginInputData = (event) => {
+    setLogin({ ...login, [event.target.name]: event.target.value });
+  };
+
+  let userLogin = async () => {
+    await authenticateLogin(login);
+  };
   return (
     <>
       <div
@@ -68,12 +85,16 @@ export default function Login({ page, setPage, signUp, setSignUp }) {
                         className="form-control border-0 border-bottom border-primary  p-0"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
+                        name="email"
+                        onChange={(event) => loginInputData(event)}
                       />
                     </div>
                     <div className="mb-5">
                       <label
                         htmlFor="exampleInputPassword1"
                         className="form-label mb-0 p-0 text-muted small"
+                        name="password"
+                        onChange={(event) => loginInputData(event)}
                       >
                         Enter Password
                       </label>
@@ -97,7 +118,10 @@ export default function Login({ page, setPage, signUp, setSignUp }) {
                       </p>
                     </div>
                     <div className="d-flex flex-column align-items-center">
-                      <button className="btn form-login col-12 py-2 shadow fw-bold mt-2">
+                      <button
+                        className="btn form-login col-12 py-2 shadow fw-bold mt-2"
+                        onClick={() => userLogin()}
+                      >
                         Login
                       </button>
                       <p
