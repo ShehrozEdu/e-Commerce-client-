@@ -66,7 +66,7 @@ export default function Navbar() {
                   <div className="dropdown-content" style={{ left: -90 }}>
                     <ul className="list-group position-absolute z-index">
                       <i
-                        class="fa-solid fa-caret-up mt-2 "
+                        className="fa-solid fa-caret-up mt-2 "
                         style={{
                           background: "transparent",
                           color: "white",
@@ -78,47 +78,52 @@ export default function Navbar() {
                       <li className="list-group-item fs-6 fw-bold p-3 d-flex  align-items-center">
                         New Customer ?
                         <span className="text-primary ms-5 signUp-underline">
-                          <a>SignUp</a>
+                          <a
+                            data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop"
+                          >
+                            SignUp
+                          </a>
                         </span>
                       </li>
                       <li className="list-group-item">
                         <i
-                          class="fa fa-user-circle me-3 text-primary"
+                          className="fa fa-user-circle me-3 text-primary"
                           aria-hidden="true"
                         ></i>
                         My Profile
                       </li>
                       <li className="list-group-item">
                         <i
-                          class="fa fa-plus me-3 text-primary"
+                          className="fa fa-plus me-3 text-primary"
                           aria-hidden="true"
                         ></i>
                         FlipKart Plus Zone
                       </li>
                       <li className="list-group-item">
                         <i
-                          class="fa fa-cart-arrow-down  me-3 text-primary"
+                          className="fa fa-cart-arrow-down  me-3 text-primary"
                           aria-hidden="true"
                         ></i>
                         Order
                       </li>
                       <li className="list-group-item">
                         <i
-                          class="fa fa-heart  me-3 text-primary"
+                          className="fa fa-heart  me-3 text-primary"
                           aria-hidden="true"
                         ></i>
                         Wishlist
                       </li>
                       <li className="list-group-item ">
                         <i
-                          class="fa fa-ticket  me-3 text-primary"
+                          className="fa fa-ticket  me-3 text-primary"
                           aria-hidden="true"
                         ></i>
                         Reward
                       </li>
                       <li className="list-group-item">
                         <i
-                          class="fa fa-gift me-3 text-primary "
+                          className="fa fa-gift me-3 text-primary "
                           aria-hidden="true"
                         ></i>
                         Gift Cards
@@ -145,7 +150,7 @@ export default function Navbar() {
                   <div className="dropdown-content" style={{ left: -90 }}>
                     <ul className="list-group position-absolute">
                       <i
-                        class="fa-solid fa-caret-up mt-2 "
+                        className="fa-solid fa-caret-up mt-2 "
                         style={{
                           background: "transparent",
                           color: "white",
@@ -156,28 +161,28 @@ export default function Navbar() {
                       ></i>
                       <li className="list-group-item p-3">
                         <i
-                          class="fa fa-bell text-primary me-3"
+                          className="fa fa-bell text-primary me-3"
                           aria-hidden="true"
                         ></i>
                         Notification Preference
                       </li>
                       <li className="list-group-item p-3">
                         <i
-                          class="fa fa-question-circle-o text-primary me-3"
+                          className="fa fa-question-circle-o text-primary me-3"
                           aria-hidden="true"
                         ></i>
                         24/7 Customer Care
                       </li>
                       <li className="list-group-item p-3">
                         <i
-                          class="fa fa-line-chart text-primary me-3"
+                          className="fa fa-line-chart text-primary me-3"
                           aria-hidden="true"
                         ></i>
                         Advertise
                       </li>
                       <li className="list-group-item p-3 ">
                         <i
-                          class="fa fa-download text-primary me-3"
+                          className="fa fa-download text-primary me-3"
                           aria-hidden="true"
                         ></i>
                         Download App

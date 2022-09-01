@@ -63,9 +63,9 @@ export default function ProductsSlide({ time, title }) {
           showDots={false}
           containerClass="carousel-container"
         >
-          {dealData.map((product) => {
+          {dealData.map((product, index) => {
             return (
-              <div className="p-3">
+              <div className="p-3" key={index}>
                 <img
                   src={product.url}
                   className=" productCarousel-img "

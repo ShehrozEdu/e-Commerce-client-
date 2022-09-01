@@ -6,10 +6,7 @@ export default function Footer() {
       {/* <!-- Remove the container if you want to extend the Footer to full width. --> */}
       <div className=" my-5">
         {/* <!-- Footer --> */}
-        <footer
-          className="text-center text-lg-start text-white w-100 position-absolute"
-          style={{ "background-color": "#212121" }}
-        >
+        <footer className="text-center text-lg-start text-white w-100 position-absolute bg-dark">
           {/* <!-- Grid container --> */}
           <div className="container p-4 pb-0">
             {/* <!-- Section: Links --> */}

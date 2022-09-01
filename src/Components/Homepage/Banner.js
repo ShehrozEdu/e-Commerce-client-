@@ -35,8 +35,13 @@ export default function Banner() {
           containerClass="carousel-container"
           className=" z-index"
         >
-          {bannerData.map((data) => (
-            <img className="banner-img" src={data.url} alt="baner" />
+          {bannerData.map((data, index) => (
+            <img
+              className="banner-img"
+              src={data.url}
+              alt="baner"
+              key={index}
+            />
           ))}
         </Carousel>
       </div>
