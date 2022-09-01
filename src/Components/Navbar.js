@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Login from "./Login";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
@@ -187,9 +188,9 @@ export default function Navbar() {
               </li>
 
               <li className="nav-item">
-                <a
+                <Link
+                  to="/cart"
                   className="nav-link text-light  fw-bold"
-                  href="/cart"
                   tabIndex="-1"
                 >
                   <i
@@ -197,7 +198,7 @@ export default function Navbar() {
                     aria-hidden="true"
                   ></i>
                   Cart
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

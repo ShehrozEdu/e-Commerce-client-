@@ -1,7 +1,7 @@
 import React from "react";
 import ProductsSlide from "../ProductsSlide";
 
-export default function AdvSlide({ time, title }) {
+export default function AdvSlide({ time, title, timer }) {
   return (
     <>
       <div className="col-12 d-flex">

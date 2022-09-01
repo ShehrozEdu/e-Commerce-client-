@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { style } from "@mui/system";
+import axios from "axios";
 
 export default function Login() {
   const initialSignUpValues = {
@@ -13,10 +13,17 @@ export default function Login() {
 
   let [page, setPage] = useState(true);
   let [signUp, setSignUp] = useState(initialSignUpValues);
-  let userSignUpData = {
-    let URL = "http://localhost:7000/api/signup"
+  let userSignUpData = async () => {
+    let URL = "http://localhost:7000/api/signup";
+    try {
+      let response = await axios.post(URL);
+      console.log(response);
+      let { status, result } = response.data;
+      if (status) {
+      } else {
+      }
+    } catch (error) {}
   };
-
   let SignupInputData = (event) => {
     setSignUp({ ...signUp, [event.target.name]: event.target.value });
     console.log(signUp);
