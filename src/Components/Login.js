@@ -1,8 +1,26 @@
 import React, { useState } from "react";
 import { style } from "@mui/system";
 
-export default function Login(props) {
+export default function Login() {
+  const initialSignUpValues = {
+    firstName: "",
+    lastName: "",
+    userName: "",
+    email: "",
+    password: "",
+    phoneNumber: "",
+  };
+
   let [page, setPage] = useState(true);
+  let [signUp, setSignUp] = useState(initialSignUpValues);
+  let userSignUpData = {
+    let URL = "http://localhost:7000/api/signup"
+  };
+
+  let SignupInputData = (event) => {
+    setSignUp({ ...signUp, [event.target.name]: event.target.value });
+    console.log(signUp);
+  };
 
   return (
     <>
@@ -109,7 +127,7 @@ export default function Login(props) {
                     <form className="col-11">
                       <div className="mb-3">
                         <label
-                          for="First_Name"
+                          for="first_Name"
                           className="form-label mb-0 p-0 small text-muted"
                         >
                           First Name
@@ -117,8 +135,12 @@ export default function Login(props) {
                         <input
                           type="text"
                           className="form-control border-0 border-bottom border-primary  p-0"
-                          id="First_Name"
+                          id="first_Name"
+                          name="firstName"
                           aria-describedby="firstName"
+                          onChange={(event) => {
+                            SignupInputData(event);
+                          }}
                         />
                       </div>
                       <div className="mb-3">
@@ -132,6 +154,10 @@ export default function Login(props) {
                           type="text"
                           className="form-control border-0 border-bottom border-primary  p-0"
                           id="Last_Name"
+                          name="lastName"
+                          onChange={(event) => {
+                            SignupInputData(event);
+                          }}
                         />
                       </div>
                       <div className="mb-3">
@@ -145,6 +171,10 @@ export default function Login(props) {
                           type="text"
                           className="form-control border-0 border-bottom border-primary  p-0"
                           id="User_Name"
+                          name="userName"
+                          onChange={(event) => {
+                            SignupInputData(event);
+                          }}
                         />
                       </div>
                       <div className="mb-3">
@@ -158,6 +188,10 @@ export default function Login(props) {
                           type="email"
                           className="form-control border-0 border-bottom border-primary  p-0"
                           id="Email"
+                          name="email"
+                          onChange={(event) => {
+                            SignupInputData(event);
+                          }}
                         />
                       </div>
 
@@ -172,6 +206,10 @@ export default function Login(props) {
                           type="password"
                           className="form-control border-0 border-bottom border-primary  p-0"
                           id="Password"
+                          name="password"
+                          onChange={(event) => {
+                            SignupInputData(event);
+                          }}
                         />
                       </div>
                       <div className="mb-3">
@@ -185,9 +223,16 @@ export default function Login(props) {
                           type="number"
                           className="form-control border-0 border-bottom border-primary  p-0"
                           id="Phone"
+                          name="phoneNumber"
+                          onChange={(event) => {
+                            SignupInputData(event);
+                          }}
                         />
                       </div>
-                      <button className="btn form-login fw-bold shadow col-12 py-2">
+                      <button
+                        className="btn form-login fw-bold shadow col-12 py-2"
+                        onClick={() => userSignUpData()}
+                      >
                         Continue
                       </button>
                       <button
