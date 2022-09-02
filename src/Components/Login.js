@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { authenticateSignup } from "../Components/Users/api";
+import { authenticateSignup, authenticateLogin } from "../Components/Users/api";
 import { DataContext } from "./Context/ContextApi";
 
 export default function Login({
@@ -9,6 +9,8 @@ export default function Login({
   setSignUp,
   setLogin,
   login,
+  setError,
+  error,
 }) {
   const { setAccount } = useContext(DataContext);
   let SignupInputData = (event) => {
@@ -25,7 +27,12 @@ export default function Login({
   };
 
   let userLogin = async () => {
-    await authenticateLogin(login);
+    let response = await authenticateLogin(login);
+    if (response.status === 200) {
+      setAccount(response.data.data.userName);
+    } else {
+      setError(true);
+    }
   };
   return (
     <>
@@ -93,8 +100,6 @@ export default function Login({
                       <label
                         htmlFor="exampleInputPassword1"
                         className="form-label mb-0 p-0 text-muted small"
-                        name="password"
-                        onChange={(event) => loginInputData(event)}
                       >
                         Enter Password
                       </label>
@@ -102,8 +107,15 @@ export default function Login({
                         type="password"
                         className="form-control border-0 border-bottom border-primary  p-0"
                         id="exampleInputPassword1"
+                        name="password"
+                        onChange={(event) => loginInputData(event)}
                       />
                     </div>
+                    {error && (
+                      <p className="fw-bold text-danger small text-center">
+                        Invalid Username or Password
+                      </p>
+                    )}
                     <div className="mb-3 form-check p-0">
                       <p className=" terms-condition text-muted ">
                         By continuing, you agree to Flipkart's
@@ -245,6 +257,8 @@ export default function Login({
                     <button
                       className="btn form-login fw-bold shadow col-12 py-2"
                       onClick={() => userSignUpData()}
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
                     >
                       Continue
                     </button>

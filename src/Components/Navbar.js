@@ -22,6 +22,7 @@ export default function Navbar() {
   let [signUp, setSignUp] = useState(initialSignUpValues);
   let { account } = useContext(DataContext);
   let [login, setLogin] = useState(initialLoginValues);
+  let [error, setError] = useState(false);
   return (
     <>
       <Login
@@ -31,6 +32,8 @@ export default function Navbar() {
         setPage={setPage}
         login={login}
         setLogin={setLogin}
+        setError={setError}
+        error={error}
       />
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height navbar-fixed">
         <div className="container-fluid m-0 p-0 d-flex">
@@ -81,8 +84,8 @@ export default function Navbar() {
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
                   {account ? (
-                    <button className="btn btn-light Login-Button text-primary fw-bold dropbtn position-relative">
-                      {account}
+                    <button className=" text-light fw-bold bg-transparent border-0">
+                      {account} <KeyboardArrowDownOutlinedIcon />
                     </button>
                   ) : (
                     <button
