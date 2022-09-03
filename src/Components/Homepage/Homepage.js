@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 
 export default function Homepage() {
   const { products } = useSelector((state) => state.getProduct);
-  console.log(products);
+  // console.log(products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProducts());

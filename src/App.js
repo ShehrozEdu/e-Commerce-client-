@@ -13,7 +13,7 @@ function App() {
       {/* <Homepage /> */}
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/productOverview/:id" element={<ProductsDetails />} />
+        <Route path="/product-overview/:id" element={<ProductsDetails />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
     </ContextApi>

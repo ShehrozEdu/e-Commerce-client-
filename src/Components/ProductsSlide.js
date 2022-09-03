@@ -66,7 +66,7 @@ export default function ProductsSlide({ time, title, products }) {
         >
           {products.map((product) => {
             return (
-              <Link to={`/productOverview/${product._id}`}>
+              <Link to={`/product-overview/${product._id}`}>
                 <div className="p-3 d-flex flex-column align-items-center">
                   <img
                     src={product.url}
