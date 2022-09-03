@@ -7,9 +7,11 @@ import BelowNavbar from "./BelowNavbar";
 import AdvSlide from "./AdvSlide";
 
 import { getProducts } from "../../Redux/Actions/ProductAction";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Homepage() {
+  const { Products } = useSelector((state) => state.getProduct.products);
+  console.log(Products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProducts());

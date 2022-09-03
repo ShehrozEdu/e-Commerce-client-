@@ -10,12 +10,12 @@ function App() {
   return (
     <ContextApi className="App">
       <Navbar />
-      <Homepage />
-      {/* <Routes>
+      {/* <Homepage /> */}
+      <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/productOverview" element={<ProductsDetails />} />
         <Route path="/cart" element={<Cart />} />
-      </Routes> */}
+      </Routes>
     </ContextApi>
   );
 }
