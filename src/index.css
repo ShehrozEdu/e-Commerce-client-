@@ -254,7 +254,7 @@ CartFooter
   cursor: pointer !important;
 }
 
-.adv-width {
+.adv-img-width {
   width: 15vw;
   height: 65vh;
 }
@@ -267,7 +267,7 @@ Media Queries for small screen
 
 ------------------------------------------------------- */
 
-@media only screen and (max-width: 508px) {
+@media only screen and (max-width: 500px) {
   .navbar-brand {
     margin-left: 1rem;
   }
@@ -311,9 +311,8 @@ Media Queries for small screen
 
   .dropdown-content {
     right: 0 !important;
+    box-shadow: #454d5e !important;
 
-    box-shadow: #454d5e !important;
-    box-shadow: #454d5e !important;
     position: absolute;
   }
 
@@ -348,6 +347,45 @@ Media Queries for small screen
 
   .after-search-Bar-anchor {
     background-color: #0c73eb;
+  }
+  .banner-img {
+    width: 100vw;
+    height: 16vh;
+  }
+  .view-btn-width {
+    width: 25vw !important;
+  }
+  .productCarousel-img {
+    width: 24vw;
+    height: 23vh;
+    cursor: pointer !important;
+  }
+  .product-text {
+    font-size: 12px !important;
+  }
+  .best-of-font {
+    font-size: 1rem;
+  }
+  .clock {
+    margin-left: 2rem;
+  }
+  .product-main-box {
+    /* height: 50vh !important; */
+  }
+  .adv-img-box {
+    width: 24vw !important;
+    height: 57vh;
+  }
+  .adv-img-width {
+    width: 20vw !important;
+    height: 50vh;
+  }
+  .login-img {
+    width: 25vw;
+    height: 20vh;
+  }
+  .Login-email-logo {
+    margin-top: 2rem !important;
   }
 }
 
@@ -386,7 +424,11 @@ Media Queries for small screen
   margin-top: 32px !important;
 }
 
+/* --------------------------------- */
+
 /* cart */
+
+/* --------------------------------- */
 
 .cart-header {
   height: 58px;

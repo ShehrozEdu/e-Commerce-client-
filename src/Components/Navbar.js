@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDownOutlined";
 import Login from "./Login";
@@ -23,6 +23,7 @@ export default function Navbar() {
   let { account } = useContext(DataContext);
   let [login, setLogin] = useState(initialLoginValues);
   let [error, setError] = useState(false);
+  // let test = localStorage.getItem("userInfo");
   return (
     <>
       <Login

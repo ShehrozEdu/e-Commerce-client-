@@ -18,9 +18,13 @@ export default function Login({
     // console.log(signUp);
   };
   let userSignUpData = async () => {
-    await authenticateSignup(signUp);
+    let { data } = await authenticateSignup(signUp);
     setAccount(signUp.userName);
+    //user save in Local
+    // localStorage.setItem("userInfo", JSON.stringify(data));
+    return data;
   };
+  // localStorage.setItem("auth", JSON.stringify(response.data.data.name));
 
   let loginInputData = (event) => {
     setLogin({ ...login, [event.target.name]: event.target.value });
@@ -28,12 +32,16 @@ export default function Login({
 
   let userLogin = async () => {
     let response = await authenticateLogin(login);
+    // localStorage.setItem("userInfo", JSON.stringify(response.data));
+
     if (response.status === 200) {
-      setAccount(response.data.data.userName);
+      // setAccount(response.data.data.userName);
+      return response.data;
     } else {
       setError(true);
     }
   };
+
   return (
     <>
       <div
@@ -59,7 +67,7 @@ export default function Login({
             <div className="row">
               <div className="col-5">
                 <section className="nav-blue p-5 text-light">
-                  <h2 className="fw-bold fs-3">
+                  <h2 className="fw-bold fs-3  ">
                     {page === true ? "Login" : "Looks like you're new here!"}
                   </h2>
                   <p className="col-12 py-3 small fs-5">
@@ -69,6 +77,7 @@ export default function Login({
                   </p>
                   <div className="Login-email-logo">
                     <img
+                      className="login-img"
                       src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/login_img_c4a81e.png"
                       alt=""
                     />
@@ -96,7 +105,7 @@ export default function Login({
                         onChange={(event) => loginInputData(event)}
                       />
                     </div>
-                    <div className="mb-5">
+                    <div className="mb-2">
                       <label
                         htmlFor="exampleInputPassword1"
                         className="form-label mb-0 p-0 text-muted small"

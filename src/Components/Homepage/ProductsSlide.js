@@ -62,18 +62,19 @@ export default function ProductsSlide({ time, title }) {
           keyBoardControl={true}
           showDots={false}
           containerClass="carousel-container"
+          className="customHeight"
         >
           {dealData.map((product, index) => {
             return (
-              <div className="p-3" key={index}>
+              <div className="p-lg-3" key={index}>
                 <img
                   src={product.url}
                   className=" productCarousel-img "
                   alt=""
                 />
-                <p className=" mt-2 ms-2">{product.discount}</p>
-                <p className=" ms-2">{product.discount}</p>
-                <p className=" ms-2">{product.discount}</p>
+                <p className=" mt-2 ms-2 product-text">{product.discount}</p>
+                {/* <p className=" ms-2 product-text">{product.discount}</p> */}
+                <p className=" ms-2 product-text">{product.discount}</p>
               </div>
             );
           })}

@@ -13,7 +13,7 @@ export default function ProductsSlide({ time, title }) {
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 510, min: 0 },
       items: 1,
     },
   };
@@ -26,7 +26,7 @@ export default function ProductsSlide({ time, title }) {
   };
   return (
     <>
-      <div className="mt-4 bg-light shadow mx-3">
+      <div className="mt-4 bg-light product-main-box shadow mx-3">
         <div className="ms-3 d-flex justify-content-between align-items-center ">
           <div className="mt-3 d-flex ">
             <div>
@@ -39,6 +39,7 @@ export default function ProductsSlide({ time, title }) {
                 <img
                   src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/timer_a73398.svg"
                   style={{ width: 24 }}
+                  className="clock"
                   alt="time clock"
                 />
                 <Countdown date={Date.now() + 5.04e7} timer={timer} />
@@ -46,7 +47,7 @@ export default function ProductsSlide({ time, title }) {
             )}
           </div>
 
-          <button className="btn btn-primary view-btn-width me-4 mt-1   ">
+          <button className="btn btn-primary view-btn-width me-4 mt-1  d-lg-block d-md-block d-none  ">
             View All
           </button>
         </div>
@@ -71,9 +72,11 @@ export default function ProductsSlide({ time, title }) {
                   className=" productCarousel-img "
                   alt=""
                 />
-                <p className=" mt-2 ms-2">{product.discount}</p>
-                <p className=" ms-2">{product.discount}</p>
-                <p className=" ms-2">{product.discount}</p>
+                <p className=" mt-2 ms-lg-2 ms-3 product-text">
+                  {product.discount}
+                </p>
+                <p className=" ms-lg-2 ms-3 product-text">{product.discount}</p>
+                {/* <p className=" ms-lg-2 ms-3 product-text">{product.discount}</p> */}
               </div>
             );
           })}
