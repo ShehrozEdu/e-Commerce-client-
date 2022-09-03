@@ -1,8 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-import { dealData } from "../resources/constants";
+import { Link } from "react-router-dom";
 import Countdown from "react-countdown";
-export default function ProductsSlide({ time, title }) {
+export default function ProductsSlide({ time, title, products }) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -64,20 +64,27 @@ export default function ProductsSlide({ time, title }) {
           showDots={false}
           containerClass="carousel-container"
         >
-          {dealData.map((product) => {
+          {products.map((product) => {
             return (
-              <div className="p-3">
-                <img
-                  src={product.url}
-                  className=" productCarousel-img "
-                  alt=""
-                />
-                <p className=" mt-2 ms-lg-2 ms-3 product-text">
-                  {product.discount}
-                </p>
-                <p className=" ms-lg-2 ms-3 product-text">{product.discount}</p>
-                {/* <p className=" ms-lg-2 ms-3 product-text">{product.discount}</p> */}
-              </div>
+              <Link to={`/productOverview/${product._id}`}>
+                <div className="p-3 d-flex flex-column align-items-center">
+                  <img
+                    src={product.url}
+                    className=" productCarousel-img "
+                    alt=""
+                  />
+                  <p className=" mt-3 text-center product-text p-0 m-0">
+                    {product.title.shortTitle}
+                  </p>
+                  <p className=" product-text text-success mt-2 small p-0 m-0">
+                    {product.discount}
+                  </p>
+                  <p className=" mt-2 text-center product-text  mt-2 text-muted small p-0 m-0">
+                    {product.tagline}
+                  </p>
+                  {/* <p className=" ms-lg-2 ms-3 product-text">{product.discount}</p> */}
+                </div>
+              </Link>
             );
           })}
         </Carousel>

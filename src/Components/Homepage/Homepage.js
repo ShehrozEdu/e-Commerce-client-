@@ -10,8 +10,8 @@ import { getProducts } from "../../Redux/Actions/ProductAction";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Homepage() {
-  const { Products } = useSelector((state) => state.getProduct.products);
-  console.log(Products);
+  const { products } = useSelector((state) => state.getProduct);
+  console.log(products);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProducts());
@@ -21,9 +21,13 @@ export default function Homepage() {
     <>
       <BelowNavbar />
       <Banner />
-      <ProductsSlide time={false} title="Best in Electronics" />
-      <AdvSlide time={true} title="Deal of the day" />
-      <ProductsSlide time={false} title="Best in Fashion" />
+      <AdvSlide time={true} title="Deal of the day" products={products} />
+      <ProductsSlide
+        time={false}
+        title="Best in Electronics"
+        products={products}
+      />
+      <ProductsSlide time={false} title="Best in Fashion" products={products} />
       <MostSearched />
       <Footer />
     </>

@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 import Footer from "../Homepage/Footer";
+import { getProductsDetails } from "../../Redux/Actions/ProductAction";
 
 export default function ProductsDetails() {
+  const dispatch = useDispatch();
+  const { _id } = useParams;
+
+  useEffect(() => {
+    dispatch(getProductsDetails(_id));
+  }, [dispatch, _id]);
   return (
     <>
       <section className="col-12 d-flex justify-content-end container-fluid">

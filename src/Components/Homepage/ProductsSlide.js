@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
+
 import { dealData } from "../../resources/constants";
 import Countdown from "react-countdown";
 export default function ProductsSlide({ time, title }) {

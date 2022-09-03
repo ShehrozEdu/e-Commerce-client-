@@ -50,7 +50,7 @@ export default function Login({
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabIndex="-1"
-        ariaLabelledBy="staticBackdropLabel"
+        aria-labelled-by="staticBackdropLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog modal-lg">
