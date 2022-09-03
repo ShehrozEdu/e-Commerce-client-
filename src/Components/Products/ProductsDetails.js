@@ -118,11 +118,11 @@ export default function ProductsDetails() {
                 <div className="col-10 ">
                   <p className="ms-5 fw-bold"> Delivery by May 2022 | ₹40</p>
                   <hr />
-                  <p className="ms-5"> No Warranty</p>
+                  <p className="ms-5"> {product.warranty}</p>
                   <hr />
-                  <p className="ms-5"> SuperCom</p>
+                  <p className="ms-5">Company Ltd.</p>
                   <p className="ms-5"> GST</p>
-                  <p className="ms-5"> View more Sellers</p>
+                  <p className="ms-5 text-primary"> View more Sellers</p>
                   <hr />
                   <p className="ms-5">{product.description}</p>
                 </div>

@@ -39,13 +39,13 @@ export default function Navbar() {
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height navbar-fixed">
         <div className="container-fluid m-0 p-0 d-flex">
           <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">
-            <a className="navbar-brand pb-0 " href="/">
+            <Link to="/" className="navbar-brand pb-0 ">
               <img
                 src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
                 alt=""
                 className="filpkart-icon"
               />
-            </a>
+            </Link>
             <a className="text-light fst-italic hover-anchor-underline small">
               Explore <span className="Explore_Plus "> Plus</span>
               <sup>
