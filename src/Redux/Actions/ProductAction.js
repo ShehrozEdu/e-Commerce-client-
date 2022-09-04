@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import * as actionTypes from "../Constants/ProductConstants";
-const URL = "http://localhost:7000/api";
+const URL = "http://localhost:8000/api";
 export const getProducts = () => async (dispatch) => {
   try {
     let { data } = await axios.get(`${URL}/get-products`);

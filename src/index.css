@@ -481,7 +481,7 @@ Media Queries for small screen
 .cart-product {
   background: white;
   margin-top: 50px;
-
+  border-bottom: 1px solid rgba(128, 128, 128, 0.607);
   margin-left: 2px;
 }
 
