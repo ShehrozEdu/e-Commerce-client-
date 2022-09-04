@@ -1,82 +1,72 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
-import CartItem from './CartItem'
+import React from "react";
+import { useState, useEffect } from "react";
+import CartItem from "./CartItem";
 
 export default function TotalView({ cartItems }) {
+  const [price, setPrice] = useState(0);
+  const [discount, setDiscount] = useState(0);
 
-    const [ price, setPrice] = useState(0);
-    const [ discount, setDiscount ] = useState(0);
-
-useEffect(()=>{
- 
+  useEffect(() => {
     totalAmount();
+  }, [cartItems]);
 
-},[cartItems ])
+  const totalAmount = () => {
+    let price = 0,
+      discount = 0;
+    cartItems.map((item) => {
+      price += item.price.mrp;
+      discount += item.price.mrp - item.price.cost;
+    });
+    setPrice(price);
+    setDiscount(discount);
+  };
+  return (
+    <>
+      <div className=" col-12 py-2  price-head">
+        <p className="fw-lighter   mx-1 fs-6">PRICE DETAILS</p>
+      </div>
 
-    const totalAmount =  () =>{
-        let price = 0, discount =0;
-        cartItems.map(item=>{
-            price += item.price.mrp;
-            discount  += (item.price.mrp - item.price.cost);
-        }) 
-        setPrice(price);
-        setDiscount(discount);
+      <div className="price-section row">
+        <div className="col-8 fw-bolder py-2">
+          <p>Price ({cartItems.length} item )</p>
+        </div>
+        <div className="col-4  py-2">
+          <p>₹ {price}</p>
+        </div>
 
-    }
-    return (
-        <>
-            <div className="col-lg-3 col-sm-12  price-detail  mx-3 mt-sm-1 mt-xs-4">
+        <div className="col-8 fw-bolder py-2">
+          <p>Discount</p>
+        </div>
+        <div className="col-4 py-2">
+          <p className="text-success">-₹{discount}</p>
+        </div>
 
-                <div className=" col-12 py-2  price-head">
-                    <p className='fw-lighter   mx-1 fs-6'>PRICE DETAILS</p>
+        <div className="col-8 fw-bolder py-2">
+          <p>Delivery Charges</p>
+        </div>
+        <div className="col-4 py-2">
+          <p className="text-success">FREE</p>
+        </div>
 
-                </div>
+        <div className="col-8 fw-bolder py-2">
+          <p>Secured Packaging Fee</p>
+        </div>
+        <div className="col-4  py-2">
+          <p>+₹29</p>
+        </div>
+      </div>
 
-                <div className="price-section row">
-                    <div className="col-8 fw-bolder py-2">
-                        <p>Price ({ cartItems.length } item )</p>
-                    </div>
-                    <div className="col-4  py-2">
-                        <p>₹ {price }</p>
-                    </div>
-
-                    <div className="col-8 fw-bolder py-2">
-                        <p>Discount</p>
-                    </div>
-                    <div className="col-4 py-2">
-                        <p className='text-success'>-₹{discount}</p>
-                    </div>
-
-                    <div className="col-8 fw-bolder py-2">
-                        <p>Delivery Charges</p>
-                    </div>
-                    <div className="col-4 py-2">
-                        <p className='text-success'>FREE</p>
-                    </div>
-
-                    <div className="col-8 fw-bolder py-2">
-                        <p>Secured Packaging Fee</p>
-                    </div>
-                    <div className="col-4  py-2">
-                        <p>+₹29</p>
-                    </div>
-
-                </div>
-
-                <div className="row pt-3 total-amount">
-                    <div className="col-8 fw-bold fs-5">
-                        <p>Total Amount</p>
-                    </div>
-                    <div className="col-4 fw-bold fs-5">
-                        <p>₹{ price - discount}</p>
-                    </div>
-
-                </div>
-                <div className="col-12 text-success py-3 fw-bolder">
-                    <p>You will save ₹{  discount} on this order</p>
-                </div>
-            </div>
-        
+      <div className="row pt-3 total-amount">
+        <div className="col-8 fw-bold fs-5">
+          <p>Total Amount</p>
+        </div>
+        <div className="col-4 fw-bold fs-5">
+          <p>₹{price - discount}</p>
+        </div>
+      </div>
+      <div className="col-12 text-success py-3 fw-bolder">
+        <p>You will save ₹{discount} on this order</p>
+      </div>
     </>
-  )
+  );
 }

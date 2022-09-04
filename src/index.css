@@ -468,6 +468,7 @@ Media Queries for small screen
 
 .cart-border p {
   border-bottom: 1px solid #0c73eb;
+  margin-top: 0.2rem;
 }
 
 .product-img {

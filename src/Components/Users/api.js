@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let URL = "http://localhost:8000/api";
+let URL = "http://localhost:7000/api";
 
 export const authenticateSignup = async (user) => {
   try {
