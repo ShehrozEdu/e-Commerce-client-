@@ -1,9 +1,8 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
-
-import { dealData } from "../../resources/constants";
+import { Link } from "react-router-dom";
 import Countdown from "react-countdown";
-export default function ProductsSlide({ time, title }) {
+export default function ProductsSlide({ time, title, products }) {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -14,7 +13,7 @@ export default function ProductsSlide({ time, title }) {
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 510, min: 0 },
       items: 1,
     },
   };
@@ -27,7 +26,7 @@ export default function ProductsSlide({ time, title }) {
   };
   return (
     <>
-      <div className="mt-4 bg-light shadow mx-3">
+      <div className="mt-4 bg-light product-main-box shadow mx-3">
         <div className="ms-3 d-flex justify-content-between align-items-center ">
           <div className="mt-3 d-flex ">
             <div>
@@ -40,6 +39,7 @@ export default function ProductsSlide({ time, title }) {
                 <img
                   src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/timer_a73398.svg"
                   style={{ width: 24 }}
+                  className="clock"
                   alt="time clock"
                 />
                 <Countdown date={Date.now() + 5.04e7} timer={timer} />
@@ -47,7 +47,7 @@ export default function ProductsSlide({ time, title }) {
             )}
           </div>
 
-          <button className="btn btn-primary view-btn-width me-4 mt-1   ">
+          <button className="btn btn-primary view-btn-width me-4 mt-1  d-lg-block d-md-block d-none  ">
             View All
           </button>
         </div>
@@ -63,20 +63,28 @@ export default function ProductsSlide({ time, title }) {
           keyBoardControl={true}
           showDots={false}
           containerClass="carousel-container"
-          className="customHeight"
         >
-          {dealData.map((product, index) => {
+          {products.map((product) => {
             return (
-              <div className="p-lg-3" key={index}>
-                <img
-                  src={product.url}
-                  className=" productCarousel-img "
-                  alt=""
-                />
-                <p className=" mt-2 ms-2 product-text">{product.discount}</p>
-                {/* <p className=" ms-2 product-text">{product.discount}</p> */}
-                <p className=" ms-2 product-text">{product.discount}</p>
-              </div>
+              <Link to={`/product-overview/${product._id}`}>
+                <div className="p-3 d-flex flex-column align-items-center">
+                  <img
+                    src={product.url}
+                    className=" productCarousel-img "
+                    alt=""
+                  />
+                  <p className=" mt-3 text-center product-text p-0 m-0">
+                    {product.title.shortTitle}
+                  </p>
+                  <p className=" product-text text-success mt-2 small p-0 m-0">
+                    {product.discount}
+                  </p>
+                  <p className=" mt-2 text-center product-text  mt-2 text-muted small p-0 m-0">
+                    {product.tagline}
+                  </p>
+                  {/* <p className=" ms-lg-2 ms-3 product-text">{product.discount}</p> */}
+                </div>
+              </Link>
             );
           })}
         </Carousel>

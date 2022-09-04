@@ -12,7 +12,7 @@ export const navData = [
     text: "Mobile",
   },
   {
-    url: "https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100",
+    url: "https://rukminim1.flixcart.com/flap/128/128/image/c12afc017e6f24cb.png?q=100",
     text: "Fashion",
   },
   {
@@ -20,7 +20,7 @@ export const navData = [
     text: "Electronics",
   },
   {
-    url: "https://rukminim1.flixcart.com/flap/128/128/image/ee162bad964c46ae.png?q=100",
+    url: "https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100  ",
     text: "Home",
   },
   {

@@ -149,8 +149,8 @@ BelowNavbar
 }
 
 .below-navbar-img img {
-  height: 13vh;
-  width: 6vw;
+  height: 64px;
+  width: 64px;
   cursor: pointer;
   text-align: center;
 }
@@ -224,6 +224,7 @@ CartFooter
 .banner-img {
   width: 110vw;
   height: 40vh;
+  cursor: pointer;
 }
 
 .create-account {

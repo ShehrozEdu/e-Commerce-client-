@@ -22,7 +22,7 @@ const responsive = {
 export default function Banner() {
   return (
     <>
-      <div className="mx-3">
+      <div className="mx-3 mt-4">
         <Carousel
           responsive={responsive}
           swipeable={true}
@@ -37,7 +37,7 @@ export default function Banner() {
         >
           {bannerData.map((data, index) => (
             <img
-              className="banner-img"
+              className="banner-img "
               src={data.url}
               alt="baner"
               key={index}

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import Footer from "./Footer";
-import MostSearched from "../MostSearched";
-import ProductsSlide from "../ProductsSlide";
+import MostSearched from "./MostSearched";
+import ProductsSlide from "./ProductsSlide";
 import Banner from "./Banner";
 import BelowNavbar from "./BelowNavbar";
 import AdvSlide from "./AdvSlide";

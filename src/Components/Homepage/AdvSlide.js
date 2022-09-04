@@ -1,5 +1,5 @@
 import React from "react";
-import ProductsSlide from "../ProductsSlide";
+import ProductsSlide from "./ProductsSlide";
 
 export default function AdvSlide({ products }) {
   return (
