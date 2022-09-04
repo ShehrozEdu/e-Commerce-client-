@@ -1,20 +1,23 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../Homepage/Footer";
 import { getProductsDetails } from "../../Redux/Actions/ProductAction";
-import { TailSpin } from "react-loader-spinner";
+// import { TailSpin } from "react-loader-spinner";
 import ProductBelowNavbar from "./ProductBelowNavbar";
+
+import CartButtons from "./CartButtons";
 
 export default function ProductsDetails() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const { loading, product } = useSelector((state) => state.getProductDetails);
-  // console.log(product);
+  console.log(product);
 
   useEffect(() => {
     dispatch(getProductsDetails(id));
   }, [dispatch, id]);
+
   return (
     <>
       <ProductBelowNavbar />
@@ -30,14 +33,7 @@ export default function ProductsDetails() {
                 />
               </div>
             </div>
-            <div className="d-flex justify-content-center mt-3">
-              <button className="btn  py-3 px-2 font-product-btn cart-btn">
-                <i class="fa-solid fa-cart-shopping me-2"></i>ADD TO CART
-              </button>
-              <button className="btn text-light ms-5 px-3 font-product-btn bolt-btn">
-                <i class="fa-solid fa-bolt me-2"></i>BUY NOW
-              </button>
-            </div>
+            <CartButtons product={product} />
           </div>
           <div className="col-7  ms-3 product-right">
             <div className="mt-2">
