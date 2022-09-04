@@ -393,6 +393,9 @@ Media Queries for small screen
   .Login-email-logo {
     margin-top: 2rem !important;
   }
+  .belowNavProduct {
+    height: 2rem !important;
+  }
 }
 
 /* Login popup */

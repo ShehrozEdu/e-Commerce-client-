@@ -3,20 +3,33 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import Footer from "../Homepage/Footer";
 import { getProductsDetails } from "../../Redux/Actions/ProductAction";
+import { TailSpin } from "react-loader-spinner";
+import ProductBelowNavbar from "./ProductBelowNavbar";
 
 export default function ProductsDetails() {
   const dispatch = useDispatch();
   const { id } = useParams();
   const { loading, product } = useSelector((state) => state.getProductDetails);
-  console.log(product);
+  // console.log(product);
 
   useEffect(() => {
     dispatch(getProductsDetails(id));
   }, [dispatch, id]);
   return (
     <>
+      <ProductBelowNavbar />
       {product && (
-        <section className="col-12 d-flex justify-content-end container-fluid">
+        <section className="col-12 d-flex justify-content-end container-fluid ">
+          {/* <TailSpin
+            height="80"
+            width="80"
+            color="#4fa94d"
+            ariaLabel="tail-spin-loading"
+            radius="1"
+            wrapperStyle={{}}
+            wrapperClass=""
+            visible={true}
+          /> */}
           <div className="col-4 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed ">
             <div>
               <div>
@@ -113,18 +126,18 @@ export default function ProductsDetails() {
                   <br />
 
                   <hr className="marginHR" />
-                  <p className="mt-5 text-muted"> Description</p>
+                  <p className="mt-1 text-muted"> Description</p>
                 </div>
                 <div className="col-10 ">
                   <p className="ms-5 fw-bold"> Delivery by May 2022 | ₹40</p>
                   <hr />
-                  <p className="ms-5"> {product.warranty}</p>
+                  <p className="ms-5 "> {product.warranty}</p>
                   <hr />
                   <p className="ms-5">Company Ltd.</p>
                   <p className="ms-5"> GST</p>
                   <p className="ms-5 text-primary"> View more Sellers</p>
                   <hr />
-                  <p className="ms-5">{product.description}</p>
+                  <p className="ms-5 ">{product.description}</p>
                 </div>
               </div>
             </div>
