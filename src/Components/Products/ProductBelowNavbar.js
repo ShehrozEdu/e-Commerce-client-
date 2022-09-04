@@ -3,34 +3,35 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 export default function ProductBelowNavbar() {
   return (
     <>
-      <div className="d-flex text-center justify-content-around bg-light py-2 shadow mb-2">
-        <div className="small">
-          Electronics <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          TV Appliances <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          Men <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          Woman <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          Baby and kids <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          Home and Furniture <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          Sports , Books and more <KeyboardArrowDownOutlinedIcon />{" "}
-        </div>
-        <div className="small">
-          Flights <KeyboardArrowDownOutlinedIcon />
-        </div>
-        <div className="small">
-          {" "}
-          Offer Zone <KeyboardArrowDownOutlinedIcon />
+      <div className="shadow">
+        <div className="d-flex text-center mx-5 justify-content-around bg-light py-2  mb-2 hover-blue">
+          <div className="small">
+            Electronics <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">
+            TV Appliances
+            <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">
+            Men <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">
+            Woman <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">
+            Baby and kids
+            <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">
+            Home and Furniture
+            <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">
+            Sports , Books and more
+            <KeyboardArrowDownOutlinedIcon className="text-muted" />
+          </div>
+          <div className="small">Flights</div>
+          <div className="small"> Offer Zone</div>
         </div>
       </div>
     </>

@@ -4,8 +4,12 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 import Login from "./Login";
 import { Link } from "react-router-dom";
 import { DataContext } from "./Context/ContextApi";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../Redux/Actions/ProductAction";
 
 export default function Navbar() {
+  let dispatch = useDispatch();
+  const { products } = useSelector((state) => state.getProduct);
   const initialSignUpValues = {
     firstName: "",
     lastName: "",
@@ -23,7 +27,16 @@ export default function Navbar() {
   let { account } = useContext(DataContext);
   let [login, setLogin] = useState(initialLoginValues);
   let [error, setError] = useState(false);
+  let [text, setText] = useState("");
   // let test = localStorage.getItem("userInfo");
+
+  let getText = (text) => {
+    setText(text);
+  };
+  useEffect(() => {
+    dispatch(getProducts());
+  }, [dispatch]);
+
   return (
     <>
       <Login
@@ -58,14 +71,43 @@ export default function Navbar() {
             </a>
           </div>
 
-          <form className="d-flex width-Searchbar ">
-            <input
-              className="form-control me-2 search-Bar-shadow p-2 ps-3"
-              type="search"
-              placeholder="Search for products, brands and more"
-              aria-label="Search"
-            />
-            <SearchOutlinedIcon className="position-absolute margin-icons" />
+          <form className=" width-Searchbar ">
+            <div className="d-flex">
+              <input
+                className="form-control me-2 search-Bar-shadow p-2 ps-3"
+                type="search"
+                placeholder="Search for products, brands and more"
+                aria-label="Search"
+                value={text}
+                onChange={(event) => getText(event.target.value)}
+              />
+              <SearchOutlinedIcon className="position-absolute margin-icons bg-light" />
+            </div>
+            {text && (
+              <ul className=" custom-suggestion position-absolute">
+                {products
+                  .filter((product) =>
+                    product.title.longTitle
+                      .toLowerCase()
+                      .includes(text.toLowerCase())
+                  )
+                  .map((products, index) => {
+                    return (
+                      <Link
+                        to={`/product-overview/${products._id}`}
+                        onClick={() => setText(products.title.longTitle)}
+                      >
+                        {text === products.title.longTitle ? null : (
+                          <li className="list-group-item small" key={index}>
+                            <SearchOutlinedIcon className="text-muted me-2" />
+                            {products.title.longTitle}
+                          </li>
+                        )}
+                      </Link>
+                    );
+                  })}
+              </ul>
+            )}
           </form>
           <button
             className="navbar-toggler"

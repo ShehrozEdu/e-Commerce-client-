@@ -20,17 +20,7 @@ export default function ProductsDetails() {
       <ProductBelowNavbar />
       {product && (
         <section className="col-12 d-flex justify-content-end container-fluid ">
-          {/* <TailSpin
-            height="80"
-            width="80"
-            color="#4fa94d"
-            ariaLabel="tail-spin-loading"
-            radius="1"
-            wrapperStyle={{}}
-            wrapperClass=""
-            visible={true}
-          /> */}
-          <div className="col-4 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed ">
+          <div className="col-4 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-sticky">
             <div>
               <div>
                 <img

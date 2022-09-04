@@ -405,6 +405,27 @@ Media Queries for small screen
 
 .test-fixed {
   left: 5%;
+  top: 10%;
+}
+
+.custom-suggestion {
+  left: 17vw;
+  width: 31.5%;
+}
+
+.custom-suggestion li {
+  cursor: pointer;
+}
+.custom-suggestion li:hover {
+  background: rgb(247, 244, 244);
+}
+.hover-blue div {
+  cursor: pointer;
+  font-weight: 500 !important;
+}
+
+.hover-blue div:hover {
+  color: #0c73eb;
 }
 
 .font-product-btn {
