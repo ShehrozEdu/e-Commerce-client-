@@ -22,20 +22,20 @@ export default function ProductsDetails() {
     <>
       <ProductBelowNavbar />
       {product && (
-        <section className="col-12 d-flex justify-content-end container-fluid ">
-          <div className="col-4 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-sticky">
-            <div>
-              <div>
+        <section className="row d-flex justify-content-end container-fluid ">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-lg-sticky">
+            
+              <div >
                 <img
                   src={product.detailUrl}
                   alt=""
-                  className="border p-3 custom-product-image"
+                  className="border p-3 custom-product-image align-self-center"
                 />
               </div>
-            </div>
+         
             <CartButtons product={product} />
           </div>
-          <div className="col-7  ms-3 product-right">
+          <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
             <div className="mt-2">
               <div>
                 <h5 className=" ">{product.title.longTitle}</h5>

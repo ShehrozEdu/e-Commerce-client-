@@ -3,8 +3,8 @@ import KeyboardArrowDownOutlinedIcon from "@mui/icons-material/KeyboardArrowDown
 export default function ProductBelowNavbar() {
   return (
     <>
-      <div className="shadow">
-        <div className="d-flex text-center mx-5 justify-content-around bg-light py-2  mb-2 hover-blue">
+      <div className="shadow ">
+        <div className="d-lg-flex below-navbar d-md-none d-sm-none d-xs-none text-center mx-5 justify-content-around bg-light py-2  mb-2 hover-blue">
           <div className="small">
             Electronics <KeyboardArrowDownOutlinedIcon className="text-muted" />
           </div>

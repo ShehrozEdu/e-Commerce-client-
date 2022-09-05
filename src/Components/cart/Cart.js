@@ -14,8 +14,8 @@ export default function Cart() {
       {cartItems ? (
         <div className="container cart-section mt-3">
           <div className="row">
-            <div className="col-lg-8 col-sm-12 ">
-              <div className="cart-header  d-flex  fw-bold ">
+            <div className="col-lg-8 col-sm-12 text-center ">
+              <div className="cart-header text-center  d-flex  fw-bold ">
                 <div className="col-6 text-center  cart-border ">
                   <p className="py-3 ">Flipkart ({cartItems.length})</p>
                 </div>

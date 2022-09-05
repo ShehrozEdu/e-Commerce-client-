@@ -264,6 +264,8 @@ CartFooter
 }
 .adv-img-box {
   height: 61vh;
+
+
 }
 .adv-img-width {
   height: 59vh;
@@ -379,15 +381,17 @@ Media Queries for small screen
   .clock {
     margin-left: 2rem;
   }
-  .product-main-box {
-    /* height: 50vh !important; */
+  .custom-product-image {
+    height: 60vh;
+    width: 100%;
   }
   .adv-img-box {
     width: 24vw !important;
     height: 57vh;
+    display: none;
   }
   .adv-img-width {
-    width: 20vw !important;
+    width: 100% !important;
     height: 50vh;
   }
   .login-img {
@@ -400,6 +404,32 @@ Media Queries for small screen
   .belowNavProduct {
     height: 2rem !important;
   }
+  .font-product-btn {
+    font-size: 0.7rem;
+    
+  }
+ .below-navbar{
+  display: none;
+ }
+ .custom-product-image {
+  height: 47vh;
+  width: 61vw;
+}
+}
+@media only screen and (min-width: 501px){
+
+  .adv-img-box{
+    display: none;
+    visibility: 0;
+  }
+  .below-navbar{
+    display: none;
+   }
+
+.custom-product-image {
+    height: 60vh;
+    width: 67vw;
+}
 }
 
 /* Login popup */
@@ -415,7 +445,10 @@ Media Queries for small screen
 .custom-suggestion {
   left: 17vw;
   width: 31.5%;
+
 }
+
+
 
 .custom-suggestion li {
   cursor: pointer;
@@ -434,6 +467,7 @@ Media Queries for small screen
 
 .font-product-btn {
   font-size: 0.9rem;
+
 }
 
 .cart-btn {
@@ -447,7 +481,7 @@ Media Queries for small screen
 
 .custom-product-image {
   height: 60vh;
-  width: 28vw;
+ width: 95%;
 }
 
 .flip-assured-icon {
