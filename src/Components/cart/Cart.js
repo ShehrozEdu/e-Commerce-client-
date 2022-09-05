@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { useSelector } from "react-redux";
+import ButtonPagination from "./ButtonPagination";
 import CartItem from "./CartItem";
 import TotalView from "./TotalView";
 
 export default function Cart() {
   const { cartItems } = useSelector((state) => state.cart);
+  let [itemsValue, setItemsValue] = useState([1]);
+
   return (
     <>
       {cartItems ? (
@@ -26,9 +29,19 @@ export default function Cart() {
             </div>
             {/* left-cart */}
             <div className="col-lg-8 col-sm-12 mb-5  mt-2">
-              {cartItems.map((item) => (
-                <CartItem item={item} />
-              ))}
+              <div className="cart-product ">
+                {cartItems.map((item, index) => (
+                  <>
+                    <CartItem item={item} index={index} />
+                    <ButtonPagination
+                      item={item}
+                      itemsValue={itemsValue}
+                      setItemsValue={setItemsValue}
+                      index={index}
+                    />
+                  </>
+                ))}
+              </div>
             </div>
             <div className="col-lg-7 position-fixed bottom-0 bg-light py-3 col-sm-12 d-flex justify-content-end align-items-center order-btn">
               <button
@@ -40,7 +53,11 @@ export default function Cart() {
             </div>
             {/* right  */}
             <div className="col-lg-3 col-sm-12  price-detail position-fixed  mt-sm-1 mt-xs-4 ">
-              <TotalView cartItems={cartItems} />
+              <TotalView
+                cartItems={cartItems}
+                itemsValue={itemsValue}
+                setItemsValue={setItemsValue}
+              />
             </div>
           </div>
         </div>
