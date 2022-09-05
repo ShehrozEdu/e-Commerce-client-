@@ -95,6 +95,9 @@ a {
   background: rgba(228, 227, 227, 0.327);
   cursor: pointer;
 }
+.badge-width {
+  font-size: 7px;
+}
 
 /* js */
 
@@ -514,4 +517,10 @@ Media Queries for small screen
 .total-amount {
   border-bottom: 1px dotted #cbc9c9;
   border-top: 1px dotted #cbc9c9;
+}
+.remove-item {
+  cursor: pointer;
+}
+.remove-item:hover {
+  color: #0c73eb !important;
 }

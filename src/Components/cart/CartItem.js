@@ -42,7 +42,7 @@ export default function CartItem({ item }) {
             </p>
           </div>
         </div>
-        <ButtonPagination />
+        <ButtonPagination item={item} />
       </div>
     </>
   );

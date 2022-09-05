@@ -10,6 +10,7 @@ import { getProducts } from "../Redux/Actions/ProductAction";
 export default function Navbar() {
   let dispatch = useDispatch();
   const { products } = useSelector((state) => state.getProduct);
+  const { cartItems } = useSelector((state) => state.cart);
   const initialSignUpValues = {
     firstName: "",
     lastName: "",
@@ -290,9 +291,14 @@ export default function Navbar() {
                   tabIndex="-1"
                 >
                   <i
-                    className="fa fa-shopping-cart me-1"
+                    className="fa fa-shopping-cart me-2 position-relative"
                     aria-hidden="true"
-                  ></i>
+                  >
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-width ">
+                      {cartItems.length}
+                      <span class="visually-hidden">unread messages</span>
+                    </span>
+                  </i>
                   Cart
                 </Link>
               </li>
