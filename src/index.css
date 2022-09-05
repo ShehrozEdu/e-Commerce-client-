@@ -482,7 +482,7 @@ Media Queries for small screen
 
 .cart-product {
   background: white;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   border-bottom: 1px solid rgba(128, 128, 128, 0.607);
   margin-left: 2px;
 }
@@ -493,16 +493,19 @@ Media Queries for small screen
 
 .order-btn {
   height: 10vh;
+  width: 55.5vw;
   border-top: 1px solid #f0f0f0;
-  box-shadow: 0 -2px 10px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.293);
+  left: 7.5%;
 }
 .order-btn button {
   padding: 15px 30px;
 }
 
 .price-detail {
-  height: 100%;
   background-color: white;
+  top: 12%;
+  right: 10%;
 }
 .price-head {
   border-bottom: 1px solid #cbc9c9;

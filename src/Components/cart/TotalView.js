@@ -22,7 +22,7 @@ export default function TotalView({ cartItems }) {
   };
   return (
     <>
-      <div className=" col-12 py-2  price-head">
+      <div className=" col-12 py-2 price-head text-muted">
         <p className="fw-lighter   mx-1 fs-6">PRICE DETAILS</p>
       </div>
 

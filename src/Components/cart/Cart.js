@@ -25,13 +25,21 @@ export default function Cart() {
               </div>
             </div>
             {/* left-cart */}
-            <div className="col-lg-7 col-sm-12 ">
+            <div className="col-lg-8 col-sm-12 mb-5  mt-2">
               {cartItems.map((item) => (
                 <CartItem item={item} />
               ))}
             </div>
+            <div className="col-lg-7 position-fixed bottom-0 bg-light py-3 col-sm-12 d-flex justify-content-end align-items-center order-btn">
+              <button
+                type="button"
+                className=" btn place-order text-white fw-bold"
+              >
+                PLACE ORDER
+              </button>
+            </div>
             {/* right  */}
-            <div className="col-lg-3 col-sm-12  price-detail  mx-3 mt-sm-1 mt-xs-4">
+            <div className="col-lg-3 col-sm-12  price-detail position-fixed  mt-sm-1 mt-xs-4 ">
               <TotalView cartItems={cartItems} />
             </div>
           </div>
