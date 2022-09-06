@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { removeFromCart } from "../../Redux/Actions/CartAction";
+
 export default function ButtonPagination({
   item,
   setItemsValue,
@@ -9,19 +10,21 @@ export default function ButtonPagination({
   index,
 }) {
   let dispatch = useDispatch();
-  let decItems = (index) => {
-    let newItem = (item.quantity -= 1);
-    setItemsValue(newItem);
+  let dec = () => {
+    let _itemsValue = [...itemsValue];
+    item.quantity -= 1;
+    setItemsValue(_itemsValue);
   };
-  let incItems = (index) => {
-    let newItem = (item.quantity += 1);
-
-    setItemsValue(newItem);
+  let inc = () => {
+    let _itemsValue = [...itemsValue];
+    item.quantity += 1;
+    setItemsValue(_itemsValue);
   };
 
   const itemRemove = (_id) => {
     dispatch(removeFromCart(_id));
   };
+
   return (
     <>
       <div className="cart-pagination d-flex justify-content-start col-12 my-5">
@@ -48,7 +51,7 @@ export default function ButtonPagination({
             <li
               className="page-item "
               aria-current="page"
-              onClick={() => decItems(index)}
+              onClick={() => dec(index)}
             >
               <a className="page-link  rounded-circle">
                 <svg
@@ -68,9 +71,9 @@ export default function ButtonPagination({
             </li>
           )}
           <li className="page-item ">
-            <a className="page-link px-3 mx-2">{itemsValue}</a>
+            <a className="page-link px-3 mx-2">{item.quantity}</a>
           </li>
-          <li className="page-item" onClick={() => incItems(index)}>
+          <li className="page-item" onClick={() => inc(index)}>
             <a className="page-link  rounded-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

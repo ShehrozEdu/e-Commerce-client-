@@ -4,10 +4,24 @@ import { useSelector } from "react-redux";
 import ButtonPagination from "./ButtonPagination";
 import CartItem from "./CartItem";
 import TotalView from "./TotalView";
+import { post } from "../../utils/paytm";
+import { payUsingPaytm } from "../Users/api";
 
 export default function Cart() {
+  const buyNow = async () => {
+    let response = await payUsingPaytm({
+      amount: 500,
+      email: "codeforinterview01@gmail.com",
+    });
+    var information = {
+      action: "https://securegw-stage.paytm.in/order/process",
+      params: response,
+    };
+    post(information);
+  };
   const { cartItems } = useSelector((state) => state.cart);
   let [itemsValue, setItemsValue] = useState([1]);
+  const [test, setTest] = useState([]);
 
   return (
     <>
@@ -47,6 +61,7 @@ export default function Cart() {
               <button
                 type="button"
                 className=" btn place-order text-white fw-bold"
+                // onClick={buyNow}
               >
                 PLACE ORDER
               </button>
