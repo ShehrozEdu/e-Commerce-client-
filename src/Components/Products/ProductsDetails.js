@@ -24,15 +24,14 @@ export default function ProductsDetails() {
       {product && (
         <section className="row d-flex justify-content-end container-fluid ">
           <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-lg-sticky">
-            
-              <div >
-                <img
-                  src={product.detailUrl}
-                  alt=""
-                  className="border p-3 custom-product-image align-self-center"
-                />
-              </div>
-         
+            <div>
+              <img
+                src={product.detailUrl}
+                alt=""
+                className="border p-3 custom-product-image align-self-center"
+              />
+            </div>
+
             <CartButtons product={product} />
           </div>
           <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
@@ -130,7 +129,7 @@ export default function ProductsDetails() {
           </div>
         </section>
       )}
-
+      div
       <Footer />
     </>
   );

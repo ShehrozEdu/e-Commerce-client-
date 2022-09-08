@@ -33,14 +33,17 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
           <p>Price ({cartItems.length} item )</p>
         </div>
         <div className="col-4  py-2">
-          <p>₹ {price * itemsValue}</p>
+          <p>₹ {price * Array(cartItems.map((item) => item.quantity))}</p>
         </div>
 
         <div className="col-8 fw-bolder py-2">
           <p>Discount</p>
         </div>
         <div className="col-4 py-2">
-          <p className="text-success">-₹{discount * itemsValue}</p>
+          <p className="text-success">
+            -₹
+            {discount * Array(cartItems.map((item) => item.quantity))}
+          </p>
         </div>
 
         <div className="col-8 fw-bolder py-2">
@@ -63,11 +66,18 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
           <p>Total Amount</p>
         </div>
         <div className="col-4 fw-bold fs-5">
-          <p>₹{(price - discount) * itemsValue}</p>
+          <p>
+            ₹
+            {(price - discount) * Array(cartItems.map((item) => item.quantity))}
+          </p>
         </div>
       </div>
       <div className="col-12 text-success py-3 fw-bolder">
-        <p>You will save ₹{discount * itemsValue} on this order</p>
+        <p>
+          You will save ₹
+          {discount * Array(cartItems.map((item) => item.quantity))} on this
+          order
+        </p>
       </div>
     </>
   );

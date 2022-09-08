@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import { removeFromCart } from "../../Redux/Actions/CartAction";
+import { removeFromCart, addToCart } from "../../Redux/Actions/CartAction";
 
 export default function ButtonPagination({
   item,
@@ -9,9 +9,10 @@ export default function ButtonPagination({
   itemsValue,
   index,
 }) {
+  // console.log(item);
   let dispatch = useDispatch();
+  let _itemsValue = [...itemsValue];
   let dec = () => {
-    let _itemsValue = [...itemsValue];
     item.quantity -= 1;
     setItemsValue(_itemsValue);
   };
@@ -19,11 +20,15 @@ export default function ButtonPagination({
     let _itemsValue = [...itemsValue];
     item.quantity += 1;
     setItemsValue(_itemsValue);
+    // dispatch(addToCart());
   };
 
   const itemRemove = (_id) => {
     dispatch(removeFromCart(_id));
   };
+  // useEffect(() => {
+  //   setItemsValue(itemsValue);
+  // }, [itemsValue]);
 
   return (
     <>
