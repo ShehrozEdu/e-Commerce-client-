@@ -5,17 +5,23 @@ import ProductsSlide from "./ProductsSlide";
 import Banner from "./Banner";
 import BelowNavbar from "./BelowNavbar";
 import AdvSlide from "./AdvSlide";
+import ElectronicsSlide from "../Products/ElectronicsSlide";
 
 import { getProducts } from "../../Redux/Actions/ProductAction";
+import { getElectronics } from "../../Redux/Actions/ElectronicsAction";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Homepage() {
   const { products } = useSelector((state) => state.getProduct);
-  // console.log(products);
+  const { electronics } = useSelector((state) => state.getElectronics);
+  // console.log(electronics);
   const dispatch = useDispatch();
 
   useEffect(() => {
     dispatch(getProducts());
+  }, [dispatch]);
+  useEffect(() => {
+    dispatch(getElectronics());
   }, [dispatch]);
 
   return (
@@ -23,11 +29,12 @@ export default function Homepage() {
       <BelowNavbar />
       <Banner />
       <AdvSlide time={true} title="Deal of the day" products={products} />
-      <ProductsSlide
+      <ElectronicsSlide electronics={electronics} />
+      {/* <ProductsSlide
         time={false}
         title="Best in Electronics"
         products={products}
-      />
+      /> */}
       <ProductsSlide time={false} title="Best in Fashion" products={products} />
       <MostSearched />
       <Footer />

@@ -5,11 +5,17 @@ import {
   getProductReducer,
   getProductDetailsReducer,
 } from "../Reducer/getProductReducer";
+import {
+  getElectronicsReducer,
+  getElectronicsDetailsReducer,
+} from "../Reducer/getElectronicsReducer";
 import { cartReducer } from "../Reducer/cartReducer";
 
 const reducer = combineReducers({
   getProduct: getProductReducer,
   getProductDetails: getProductDetailsReducer,
+  getElectronics: getElectronicsReducer,
+  getElectronicsDetails: getElectronicsDetailsReducer,
   cart: cartReducer,
 });
 const middleware = [thunk];

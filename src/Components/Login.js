@@ -107,7 +107,6 @@ export default function Login({
                         className="form-control border-0 border-bottom border-primary  p-0"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
-                        value=""
                         name="email"
                         onChange={(event) => loginInputData(event)}
                       />
