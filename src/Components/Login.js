@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { authenticateSignup, authenticateLogin } from "../Components/Users/api";
 import { DataContext } from "./Context/ContextApi";
 
@@ -32,16 +32,22 @@ export default function Login({
 
   let userLogin = async () => {
     let response = await authenticateLogin(login);
-    // localStorage.setItem("userInfo", JSON.stringify(response.data));
+    localStorage.setItem("userInfo", response.data.user.userName);
+    // console.log(response);
 
     if (response.status === 200) {
-      // setAccount(response.data.data.userName);
-      return response.data;
+      setAccount(response.data.user.userName);
+      // return response.data;
     } else {
       setError(true);
     }
   };
-
+  useEffect(() => {
+    let newUser = localStorage.getItem("userInfo");
+    setAccount(newUser);
+    // console.log(newUser);
+    //  setAccount(userName)
+  });
   return (
     <>
       <div
@@ -101,6 +107,7 @@ export default function Login({
                         className="form-control border-0 border-bottom border-primary  p-0"
                         id="exampleInputEmail1"
                         aria-describedby="emailHelp"
+                        value=""
                         name="email"
                         onChange={(event) => loginInputData(event)}
                       />
@@ -116,6 +123,7 @@ export default function Login({
                         type="password"
                         className="form-control border-0 border-bottom border-primary  p-0"
                         id="exampleInputPassword1"
+                        value=""
                         name="password"
                         onChange={(event) => loginInputData(event)}
                       />
@@ -142,6 +150,8 @@ export default function Login({
                       <button
                         className="btn form-login col-12 py-2 shadow fw-bold mt-2"
                         onClick={() => userLogin()}
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
                       >
                         Login
                       </button>

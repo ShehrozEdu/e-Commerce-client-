@@ -29,6 +29,10 @@ export default function Navbar() {
   let [login, setLogin] = useState(initialLoginValues);
   let [error, setError] = useState(false);
   let [text, setText] = useState("");
+  let logOut = () => {
+    localStorage.removeItem("userInfo");
+    window.location.reload();
+  };
   // let test = localStorage.getItem("userInfo");
 
   let getText = (text) => {
@@ -209,7 +213,7 @@ export default function Navbar() {
                       {account ? (
                         <li
                           className="list-group-item"
-                          onClick={() => window.location.reload()}
+                          onClick={() => logOut()}
                         >
                           <i
                             className="fa fa-sign-out me-3 text-primary"

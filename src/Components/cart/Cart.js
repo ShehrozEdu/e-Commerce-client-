@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import ButtonPagination from "./ButtonPagination";
 import CartItem from "./CartItem";
+import OrderButton from "./OrderButton";
 import TotalView from "./TotalView";
 import { post } from "../../utils/paytm";
 import { payUsingPaytm } from "../Users/api";
@@ -28,8 +29,8 @@ export default function Cart() {
       {cartItems ? (
         <div className="container cart-section mt-3">
           <div className="row">
-            <div className="col-lg-8 col-sm-12 text-center ">
-              <div className="cart-header text-center  d-flex  fw-bold ">
+            <div className="col-lg-8 col-sm-12 ">
+              <div className="cart-header  d-flex  fw-bold ">
                 <div className="col-6 text-center  cart-border ">
                   <p className="py-3 ">Flipkart ({cartItems.length})</p>
                 </div>
@@ -40,34 +41,27 @@ export default function Cart() {
                   Enter Delivery Pincode
                 </button>
               </div>
-            </div>
-            {/* left-cart */}
-            <div className="col-lg-8 col-sm-12 mb-5  mt-2">
-              <div className="cart-product ">
-                {cartItems.map((item, index) => (
-                  <>
-                    <CartItem item={item} index={index} />
-                    <ButtonPagination
-                      item={item}
-                      itemsValue={itemsValue}
-                      setItemsValue={setItemsValue}
-                      index={index}
-                    />
-                  </>
-                ))}
+
+              {/* left-cart */}
+              <div className="col-lg-12 col-sm-12 mb-5  mt-2">
+                <div className="cart-product ">
+                  {cartItems.map((item, index) => (
+                    <>
+                      <CartItem item={item} index={index} />
+                      <ButtonPagination
+                        item={item}
+                        itemsValue={itemsValue}
+                        setItemsValue={setItemsValue}
+                        index={index}
+                      />
+                    </>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="col-lg-7 position-fixed bottom-0 bg-light py-3 col-sm-12 d-flex justify-content-end align-items-center order-btn">
-              <button
-                type="button"
-                className=" btn place-order text-white fw-bold"
-                // onClick={buyNow}
-              >
-                PLACE ORDER
-              </button>
-            </div>
+
             {/* right  */}
-            <div className="col-lg-3 col-sm-12  price-detail position-fixed  mt-sm-1 mt-xs-4 ">
+            <div className="col-lg-4 col-sm-12   price-detail   mt-sm-1 mt-xs-4 ">
               <TotalView
                 cartItems={cartItems}
                 itemsValue={itemsValue}
@@ -75,6 +69,7 @@ export default function Cart() {
               />
             </div>
           </div>
+          <OrderButton />
         </div>
       ) : (
         <div>EMpty</div>
