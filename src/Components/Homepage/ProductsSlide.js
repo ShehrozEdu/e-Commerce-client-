@@ -46,10 +46,11 @@ export default function ProductsSlide({ time, title, products }) {
               </div>
             )}
           </div>
-
-          <button className="btn btn-primary view-btn-width me-4 mt-1  d-lg-block d-md-block d-none  ">
-            View All
-          </button>
+          <Link to={"/product-list"}>
+            <button className="btn btn-primary view-btn-width me-4 mt-1  d-lg-block d-md-block d-none  ">
+              View All
+            </button>
+          </Link>
         </div>
         <hr className="ms-0" />
         <Carousel

@@ -122,7 +122,6 @@ export default function Login({
                         type="password"
                         className="form-control border-0 border-bottom border-primary  p-0"
                         id="exampleInputPassword1"
-                        value=""
                         name="password"
                         onChange={(event) => loginInputData(event)}
                       />
@@ -147,7 +146,7 @@ export default function Login({
                     </div>
                     <div className="d-flex flex-column align-items-center">
                       <button
-                        className="btn form-login col-12 py-2 shadow fw-bold mt-2"
+                        className="btn form-login col-12 py-2 shadow fw-bold mt-2 login-Button"
                         onClick={() => userLogin()}
                         data-bs-dismiss="modal"
                         aria-label="Close"
@@ -273,7 +272,7 @@ export default function Login({
                       />
                     </div>
                     <button
-                      className="btn form-login fw-bold shadow col-12 py-2"
+                      className="btn form-login fw-bold shadow col-12 py-2 login-Button"
                       onClick={() => userSignUpData()}
                       data-bs-dismiss="modal"
                       aria-label="Close"
