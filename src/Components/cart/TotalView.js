@@ -1,26 +1,28 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import CartItem from "./CartItem";
 
 export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
-  const [price, setPrice] = useState(0);
+  // console.log("cartItems:", cartItems);
+  const [totalMRP, setTotalMRP] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
   const [discount, setDiscount] = useState(0);
 
   useEffect(() => {
     totalAmount();
-  }, [cartItems]);
+  }, [cartItems, itemsValue]);
 
   const totalAmount = () => {
-    let price = 0,
-      discount = 0;
-    cartItems.map((item) => {
-      {
-        price += item.price.mrp;
-        discount += item.price.mrp - item.price.cost;
-      }
-    });
-    setPrice(price);
-    setDiscount(discount);
+    let totalPrice = cartItems
+      .map((item) => item.quantity * item.price.cost)
+      .reduce((ac, cv) => ac + cv, 0);
+
+    let maxMrp = cartItems
+      .map((item) => item.quantity * item.price.mrp)
+      .reduce((ac, cv) => ac + cv, 0);
+    let disc = maxMrp - totalPrice;
+    setTotalMRP(maxMrp);
+    setDiscount(disc);
+    setTotalPrice(totalPrice);
   };
   return (
     <>
@@ -33,7 +35,7 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
           <p>Price ({cartItems.length} item )</p>
         </div>
         <div className="col-4  py-2">
-          <p>₹ {price * Array(cartItems.map((item) => item.quantity))}</p>
+          <p>₹ {totalMRP}</p>
         </div>
 
         <div className="col-8 fw-bolder py-2">
@@ -42,7 +44,7 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
         <div className="col-4 py-2">
           <p className="text-success">
             -₹
-            {discount * Array(cartItems.map((item) => item.quantity))}
+            {discount}
           </p>
         </div>
 
@@ -66,18 +68,11 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
           <p>Total Amount</p>
         </div>
         <div className="col-4 fw-bold fs-5">
-          <p>
-            ₹
-            {(price - discount) * Array(cartItems.map((item) => item.quantity))}
-          </p>
+          <p>₹{totalPrice}</p>
         </div>
       </div>
       <div className="col-12 text-success py-3 fw-bolder">
-        <p>
-          You will save ₹
-          {discount * Array(cartItems.map((item) => item.quantity))} on this
-          order
-        </p>
+        <p>You will save ₹{discount} on this order</p>
       </div>
     </>
   );
