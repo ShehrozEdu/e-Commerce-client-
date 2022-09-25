@@ -32,7 +32,7 @@ export default function ButtonPagination({
 
   return (
     <>
-      <div className="cart-pagination d-flex justify-content-start col-12 my-5">
+      <div className="cart-pagination d-flex justify-content-start col-12 my-5 noselect">
         <ul className="pagination pagination-sm mx-2">
           {item.quantity === 1 ? (
             <li className="page-item " aria-current="page">
@@ -95,7 +95,6 @@ export default function ButtonPagination({
         </ul>
 
         <div className="mt-1 ">
-          {" "}
           <span
             className="mx-2  text-dark  text-center small remove-item "
             onClick={() => itemRemove(item._id)}

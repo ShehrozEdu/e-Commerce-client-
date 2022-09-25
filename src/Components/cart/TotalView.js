@@ -27,7 +27,7 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
   return (
     <>
       <div className=" col-lg-12 py-2 price-head text-muted">
-        <p className="fw-lighter   mx-1 fs-6">PRICE DETAILS</p>
+        <p className="fw-lighter mx-1 fs-6">PRICE DETAILS</p>
       </div>
 
       <div className="price-section row">

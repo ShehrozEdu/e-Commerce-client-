@@ -45,10 +45,11 @@ export default function ElectronicsSlide({ electronics }) {
               <Countdown date={Date.now() + 5.04e7} timer={timer} />
             </div> */}
           </div>
-
-          <button className="btn btn-primary view-btn-width me-4 mt-1  d-lg-block d-md-block d-none  ">
-            View All
-          </button>
+          <Link to={"/electronics-list"}>
+            <button className="btn btn-primary view-btn-width me-4 mt-1  d-lg-block d-md-block d-none  ">
+              View All
+            </button>
+          </Link>
         </div>
         <hr className="ms-0" />
         <Carousel
@@ -65,7 +66,7 @@ export default function ElectronicsSlide({ electronics }) {
         >
           {electronics.map((product) => {
             return (
-              <Link to={`/product-overview/${product._id}`}>
+              <Link to={`/electronics-overview/${product._id}`}>
                 <div className="p-3 d-flex flex-column align-items-center">
                   <img
                     src={product.url}

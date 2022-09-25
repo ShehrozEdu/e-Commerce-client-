@@ -235,12 +235,19 @@ CartFooter
   height: 40vh;
   cursor: pointer;
 }
-
+.banner-img-1 {
+  /* margin: auto !important; */
+  /* margin-left: 15rem !important; */
+  width: 120vw;
+  height: 18vh;
+}
 .create-account {
   margin-top: 5rem;
   cursor: pointer;
 }
-
+.AdvGridImgWidth {
+  width: 31vw;
+}
 .create-account:active {
   color: rgb(115, 166, 255) !important;
 }
@@ -562,4 +569,12 @@ Media Queries for small screen
 }
 .remove-item:hover {
   color: #0c73eb !important;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }

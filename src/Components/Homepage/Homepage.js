@@ -10,6 +10,7 @@ import ElectronicsSlide from "../Products/ElectronicsSlide";
 import { getProducts } from "../../Redux/Actions/ProductAction";
 import { getElectronics } from "../../Redux/Actions/ElectronicsAction";
 import { useDispatch, useSelector } from "react-redux";
+import AdvGrid from "./AdvGrid";
 
 export default function Homepage() {
   const { products } = useSelector((state) => state.getProduct);
@@ -35,7 +36,9 @@ export default function Homepage() {
         title="Best in Electronics"
         products={products}
       /> */}
+      <AdvGrid />
       <ProductsSlide time={false} title="Best in Fashion" products={products} />
+
       <MostSearched />
       <Footer />
     </>

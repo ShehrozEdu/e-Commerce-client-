@@ -44,6 +44,13 @@ export default function Banner() {
             />
           ))}
         </Carousel>
+        <div className=" w-100 d-flex justify-content-center align-items-center">
+          <img
+            src="https://rukminim1.flixcart.com/fk-p-flap/2666/230/image/87da51544bff6617.jpg?q=50"
+            className="banner-img-1"
+            alt=""
+          />
+        </div>
       </div>
     </>
   );

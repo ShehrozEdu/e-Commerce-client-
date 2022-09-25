@@ -64,6 +64,7 @@ export default function ProductsSlide({ time, title, products }) {
           keyBoardControl={true}
           showDots={false}
           containerClass="carousel-container"
+          showIndicators={true}
         >
           {products.map((product) => {
             return (
