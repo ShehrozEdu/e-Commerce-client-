@@ -37,7 +37,7 @@ export default function ElectronicsDetails() {
           <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
             <div className="mt-2">
               <div>
-                <h5 className=" ">{electronics.title.longTitle}</h5>
+                <h5 className=" ">{electronics.longTitle}</h5>
               </div>
               <div className="small text-muted d-flex m-0 p-0">
                 <p className="">9,718 Ratings & 1,350 Reviews</p>
@@ -50,12 +50,10 @@ export default function ElectronicsDetails() {
                 </span>
               </div>
               <div className="d-flex align-items-center">
-                <h3>₹{electronics.price.cost}</h3>
+                <h3>₹{electronics.cost}</h3>
                 <span>
                   <strike>
-                    <h5 className="text-muted ms-3 mt-1">
-                      ₹{electronics.price.mrp}
-                    </h5>
+                    <h5 className="text-muted ms-3 mt-1">₹{electronics.mrp}</h5>
                   </strike>
                 </span>
                 <span className="text-success ms-3">
