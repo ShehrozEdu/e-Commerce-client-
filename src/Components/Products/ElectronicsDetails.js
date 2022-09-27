@@ -6,7 +6,7 @@ import { getElectronicsDetails } from "../../Redux/Actions/ElectronicsAction";
 // import { TailSpin } from "react-loader-spinner";
 import ProductBelowNavbar from "./ProductBelowNavbar";
 
-import CartButtons from "./CartButtons";
+import ElectronicCartButtons from "./ElectronicCartButtons";
 
 export default function ElectronicsDetails() {
   const dispatch = useDispatch();
@@ -25,16 +25,17 @@ export default function ElectronicsDetails() {
       <ProductBelowNavbar />
       {electronics && (
         <section className="row d-flex justify-content-end container-fluid ">
-          <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-lg-sticky">
-            <div>
+          <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-lg-sticky">
+            <div className="p-2">
               <img
                 src={electronics.detailUrl}
                 alt="electronics"
                 className="border p-3 custom-product-image align-self-center"
               />
             </div>
+            {/* <ElectronicCartButtons electronics={electronics} /> */}
           </div>
-          <div className="col-lg-7 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
+          <div className="col-lg-6 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
             <div className="mt-2">
               <div>
                 <h5 className=" ">{electronics.longTitle}</h5>

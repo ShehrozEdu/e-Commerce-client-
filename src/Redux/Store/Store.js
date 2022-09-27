@@ -10,6 +10,7 @@ import {
   getElectronicsDetailsReducer,
 } from "../Reducer/getElectronicsReducer";
 import { cartReducer } from "../Reducer/cartReducer";
+import { ElectronicsCartReducer } from "../Reducer/ElectronicsCartReducer";
 
 const reducer = combineReducers({
   getProduct: getProductReducer,
@@ -17,6 +18,7 @@ const reducer = combineReducers({
   getElectronics: getElectronicsReducer,
   getElectronicsDetails: getElectronicsDetailsReducer,
   cart: cartReducer,
+  electronicsCart: ElectronicsCartReducer,
 });
 const middleware = [thunk];
 const store = createStore(

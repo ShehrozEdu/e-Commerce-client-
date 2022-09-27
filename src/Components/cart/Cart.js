@@ -9,20 +9,9 @@ import { post } from "../../utils/paytm";
 import { payUsingPaytm } from "../Users/api";
 
 export default function Cart() {
-  // const buyNow = async () => {
-  //   let response = await payUsingPaytm({
-  //     amount: 500,
-  //     email: "codeforinterview01@gmail.com",
-  //   });
-  //   var information = {
-  //     action: "https://securegw-stage.paytm.in/order/process",
-  //     params: response,
-  //   };
-  //   post(information);
-  // };
   const { cartItems } = useSelector((state) => state.cart);
+  // const { cartItems } = useSelector((state) => state.electronicsCart);
   let [itemsValue, setItemsValue] = useState([1]);
-  // const [test, setTest] = useState([]);
 
   return (
     <>

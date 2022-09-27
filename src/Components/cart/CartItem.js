@@ -33,12 +33,11 @@ export default function CartItem({ item }) {
               {item.price.discount} Off 2 offers applied
             </span>
             <p className=" small ">
-            Delivery by Sat Sep 3 |<span className="text-success">Free </span>
-            <span className="text-decoration-line-through"> ₹40</span>
-          </p>
+              Delivery by Sat Sep 3 |<span className="text-success">Free </span>
+              <span className="text-decoration-line-through"> ₹40</span>
+            </p>
           </p>
         </div>
-       
       </div>
     </>
   );

@@ -31,14 +31,9 @@ export default function Homepage() {
       <Banner />
       <AdvSlide time={true} title="Deal of the day" products={products} />
       <ElectronicsSlide electronics={electronics} />
-      {/* <ProductsSlide
-        time={false}
-        title="Best in Electronics"
-        products={products}
-      /> */}
       <AdvGrid />
       <ProductsSlide time={false} title="Best in Fashion" products={products} />
-
+      <AdvGrid />
       <MostSearched />
       <Footer />
     </>

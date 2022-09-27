@@ -19,15 +19,16 @@ export default function ElectronicsViewAll() {
           <section className="bg-light">
             <div className="d-flex justify-content-center w-100">
               <div className="product-list col-12  d-flex  w-100 flex-wrap ">
-                {electronics.map((item) => {
+                {electronics.map((item, index) => {
                   return (
-                    <div className="align-items-center d-flex flex-column w-25 mt-5 ">
+                    <div
+                      className="align-items-center d-flex flex-column w-25 mt-5 "
+                      key={index}
+                    >
                       <Link to={`/electronics-overview/${item._id}`}>
                         <img src={item.url} alt="" />
                       </Link>
-                      <strong className="mb-0 mt-4">
-                        {item.title.shortTitle}
-                      </strong>
+                      <strong className="mb-0 mt-4">{item.shortTitle}</strong>
                       <p className="text-success m-0 mt-1 small">
                         {item.discount}
                       </p>

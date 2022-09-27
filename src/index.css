@@ -236,8 +236,6 @@ CartFooter
   cursor: pointer;
 }
 .banner-img-1 {
-  /* margin: auto !important; */
-  /* margin-left: 15rem !important; */
   width: 120vw;
   height: 18vh;
 }
@@ -251,7 +249,9 @@ CartFooter
 .create-account:active {
   color: rgb(115, 166, 255) !important;
 }
-
+.banner-below {
+  width: 100%;
+}
 .Existing-User {
   box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.341);
   font-weight: 500;
@@ -270,7 +270,11 @@ CartFooter
   height: 22vh;
   cursor: pointer !important;
 }
-
+.electronicsCarousel-img {
+  width: 160px;
+  height: 140px;
+  cursor: pointer !important;
+}
 .adv-img-width {
   width: 15vw;
   height: 65vh;
@@ -380,6 +384,13 @@ Media Queries for small screen
   .banner-img {
     width: 100vw;
     height: 16vh;
+  }
+  .banner-below {
+    width: 50%;
+  }
+  .banner-img-1 {
+    width: 110vw;
+    height: 18vh;
   }
   .view-btn-width {
     width: 25vw !important;

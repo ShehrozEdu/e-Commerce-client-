@@ -19,9 +19,12 @@ export default function ProductViewAll() {
           <section className="bg-light">
             <div className="d-flex justify-content-center w-100">
               <div className="product-list col-12  d-flex  w-100 flex-wrap ">
-                {products.map((item) => {
+                {products.map((item, index) => {
                   return (
-                    <div className="align-items-center d-flex flex-column w-25 mt-5 ">
+                    <div
+                      className="align-items-center d-flex flex-column w-25 mt-5 "
+                      key={index}
+                    >
                       <Link to={`/product-overview/${item._id}`}>
                         <img src={item.url} alt="" />
                       </Link>
