@@ -1,10 +1,17 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import OrderButton from "./OrderButton";
 
-export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
+export default function TotalView({
+  cartItems,
+  itemsValue,
+  setItemsValue,
+  totalPrice,
+  setTotalPrice,
+}) {
   // console.log("cartItems:", cartItems);
   const [totalMRP, setTotalMRP] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
+
   const [discount, setDiscount] = useState(0);
 
   useEffect(() => {
@@ -74,6 +81,7 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
       <div className="col-12 text-success py-3 fw-bolder">
         <p>You will save ₹{discount} on this order</p>
       </div>
+      {/* <OrderButton totalPrice={totalPrice} /> */}
     </>
   );
 }
