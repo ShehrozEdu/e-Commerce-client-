@@ -6,6 +6,7 @@ import OrderButton from "./OrderButton";
 import TotalView from "./TotalView";
 
 export default function Cart() {
+  const [totalPrice, setTotalPrice] = useState(0);
   const { cartItems } = useSelector((state) => state.cart);
   // const { cartItems } = useSelector((state) => state.electronicsCart);
   let [itemsValue, setItemsValue] = useState([1]);
@@ -50,12 +51,14 @@ export default function Cart() {
             <div className="col-lg-4 col-sm-12   price-detail   mt-sm-1 mt-xs-4 ">
               <TotalView
                 cartItems={cartItems}
+                totalPrice={totalPrice}
+                setTotalPrice={setTotalPrice}
                 itemsValue={itemsValue}
                 setItemsValue={setItemsValue}
               />
             </div>
           </div>
-          <OrderButton />
+          <OrderButton totalPrice={totalPrice} />
         </div>
       ) : (
         <div>EMpty</div>
