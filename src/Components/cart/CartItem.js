@@ -25,7 +25,7 @@ export default function CartItem({ item }) {
           </div>
           <p className="fs-6 my-2">
             <span className="text-decoration-line-through text-muted">
-              ₹{item.price.mrp}
+              ₹{item.mrp}
             </span>
             <span className="fs-5 fw-bold px-1">₹{item.cost}</span>
             <span className="text-success fw-bold px-2">

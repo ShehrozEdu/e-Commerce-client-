@@ -7,6 +7,7 @@ import { getProductsDetails } from "../../Redux/Actions/ProductAction";
 import ProductBelowNavbar from "./ProductBelowNavbar";
 
 import CartButtons from "./CartButtons";
+import ProductSkeleton from "../../utils/ProductSkeleton";
 
 export default function ProductsDetails() {
   const dispatch = useDispatch();
@@ -21,7 +22,7 @@ export default function ProductsDetails() {
   return (
     <>
       <ProductBelowNavbar />
-      {product && (
+      {product ? (
         <section className="row d-flex justify-content-end container-fluid ">
           <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed ">
             <div>
@@ -37,7 +38,7 @@ export default function ProductsDetails() {
           <div className="col-lg-6 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
             <div className="mt-2">
               <div>
-                <h5 className=" ">{product.title.longTitle}</h5>
+                <h5 className=" ">{product.longTitle}</h5>
               </div>
               <div className="small text-muted d-flex m-0 p-0">
                 <p className="">9,718 Ratings & 1,350 Reviews</p>
@@ -50,12 +51,10 @@ export default function ProductsDetails() {
                 </span>
               </div>
               <div className="d-flex align-items-center">
-                <h3>₹{product.price.cost}</h3>
+                <h3>₹{product.cost}</h3>
                 <span>
                   <strike>
-                    <h5 className="text-muted ms-3 mt-1">
-                      ₹{product.price.mrp}
-                    </h5>
+                    <h5 className="text-muted ms-3 mt-1">₹{product.mrp}</h5>
                   </strike>
                 </span>
                 <span className="text-success ms-3">{product.discount}</span>
@@ -128,8 +127,9 @@ export default function ProductsDetails() {
             </div>
           </div>
         </section>
+      ) : (
+        <ProductSkeleton />
       )}
-
       <Footer />
     </>
   );

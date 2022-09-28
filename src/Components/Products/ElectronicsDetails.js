@@ -6,6 +6,7 @@ import { getElectronicsDetails } from "../../Redux/Actions/ElectronicsAction";
 import ProductBelowNavbar from "./ProductBelowNavbar";
 
 import ElectronicCartButtons from "./ElectronicCartButtons";
+import ProductSkeleton from "../../utils/ProductSkeleton";
 
 export default function ElectronicsDetails() {
   const dispatch = useDispatch();
@@ -17,12 +18,13 @@ export default function ElectronicsDetails() {
 
   useEffect(() => {
     dispatch(getElectronicsDetails(id));
+    window.scrollTo(0, 0);
   }, [dispatch, id]);
 
   return (
     <>
       <ProductBelowNavbar />
-      {electronics && (
+      {electronics ? (
         <section className="row d-flex justify-content-end container-fluid ">
           <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-lg-sticky">
             <div className="p-2">
@@ -128,8 +130,9 @@ export default function ElectronicsDetails() {
             </div>
           </div>
         </section>
+      ) : (
+        <ProductSkeleton />
       )}
-
       <Footer />
     </>
   );

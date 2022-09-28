@@ -76,7 +76,7 @@ export default function ProductsSlide({ time, title, products }) {
                     alt=""
                   />
                   <p className=" mt-3 text-center product-text p-0 m-0">
-                    {product.title.shortTitle}
+                    {product.shortTitle}
                   </p>
                   <p className=" product-text text-success mt-2 small p-0 m-0">
                     {product.discount}
