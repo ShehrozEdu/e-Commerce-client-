@@ -23,7 +23,7 @@ export default function ProductsDetails() {
       <ProductBelowNavbar />
       {product && (
         <section className="row d-flex justify-content-end container-fluid ">
-          <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed position-lg-sticky">
+          <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-5 pt-2 d-flex flex-column align-items-center  h-75 test-fixed ">
             <div>
               <img
                 src={product.detailUrl}

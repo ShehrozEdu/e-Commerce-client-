@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import ButtonPagination from "./ButtonPagination";
 
 export default function CartItem({ item }) {
-  // const { cartItems } = useSelector(state => state.cart )df
   return (
     <>
       <div className="d-flex py-4">
@@ -12,7 +11,7 @@ export default function CartItem({ item }) {
         </div>
         <div className="text-sm-start ">
           <div className="col-lg-6 col-sm-6  ">
-            <p className="fs-5 ">{item.title.shortTitle}</p>
+            <p className="fs-5 ">{item.shortTitle}</p>
             <p className="fs-6 fw-lighter ">
               Seller:NGIVR RETAILS
               <span>
@@ -28,9 +27,9 @@ export default function CartItem({ item }) {
             <span className="text-decoration-line-through text-muted">
               ₹{item.price.mrp}
             </span>
-            <span className="fs-5 fw-bold px-1">₹{item.price.cost}</span>
+            <span className="fs-5 fw-bold px-1">₹{item.cost}</span>
             <span className="text-success fw-bold px-2">
-              {item.price.discount} Off 2 offers applied
+              {item.discount} Off 2 offers applied
             </span>
             <p className=" small ">
               Delivery by Sat Sep 3 |<span className="text-success">Free </span>

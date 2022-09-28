@@ -341,7 +341,9 @@ Media Queries for small screen
     margin-top: 0.7rem;
     font-size: 1rem !important;
   }
-
+  .test-fixed {
+    position: static !important;
+  }
   .dropdown-content {
     right: 0 !important;
     box-shadow: #454d5e !important;
@@ -442,6 +444,10 @@ Media Queries for small screen
     height: 47vh;
     width: 61vw;
   }
+  .custom-suggestion {
+    left: 6.5rem !important;
+    width: 49.6vw !important;
+  }
 }
 @media only screen and (min-width: 501px) {
   .adv-img-box {
@@ -466,11 +472,12 @@ Media Queries for small screen
 .test-fixed {
   left: 5%;
   top: 10%;
+  position: sticky;
 }
 
 .custom-suggestion {
-  left: 17vw;
-  width: 31.5%;
+  left: 16.4rem;
+  width: 31.6%;
 }
 
 .custom-suggestion li {

@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import Footer from "../Homepage/Footer";
 import { getElectronicsDetails } from "../../Redux/Actions/ElectronicsAction";
-// import { TailSpin } from "react-loader-spinner";
 import ProductBelowNavbar from "./ProductBelowNavbar";
 
 import ElectronicCartButtons from "./ElectronicCartButtons";
@@ -33,7 +32,7 @@ export default function ElectronicsDetails() {
                 className="border p-3 custom-product-image align-self-center"
               />
             </div>
-            {/* <ElectronicCartButtons electronics={electronics} /> */}
+            <ElectronicCartButtons electronics={electronics} />
           </div>
           <div className="col-lg-6 col-md-7 col-sm-12 col-xs-12   ms-3 product-right">
             <div className="mt-2">

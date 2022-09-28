@@ -277,7 +277,10 @@ export default function Navbar() {
                         Advertise
                       </li>
                       <li className="list-group-item ">
-                        <Link to="https://play.google.com/store/apps/details?id=com.flipkart.android">
+                        <Link
+                          to="https://play.google.com/store/apps/details?id=com.flipkart.android"
+                          target="_blank"
+                        >
                           <i
                             className="fa fa-download text-primary me-3"
                             aria-hidden="true"

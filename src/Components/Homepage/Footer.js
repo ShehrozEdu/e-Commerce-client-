@@ -242,7 +242,7 @@ export default function Footer() {
               </a>
             </div>
             <span className="ms-lg-5 ms-0">
-              ©2022 <span className="me-lg-5">Shehroz</span>
+              ©2022 <span className="">Shehroz,Ekansh & Digvijay</span>
             </span>
             <img
               src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/payment-method_69e7ec.svg"

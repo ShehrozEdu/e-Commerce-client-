@@ -13,11 +13,11 @@ export default function TotalView({ cartItems, itemsValue, setItemsValue }) {
 
   const totalAmount = () => {
     let totalPrice = cartItems
-      .map((item) => item.quantity * item.price.cost)
+      .map((item) => item.quantity * item.cost)
       .reduce((ac, cv) => ac + cv, 0);
 
     let maxMrp = cartItems
-      .map((item) => item.quantity * item.price.mrp)
+      .map((item) => item.quantity * item.mrp)
       .reduce((ac, cv) => ac + cv, 0);
     let disc = maxMrp - totalPrice;
     setTotalMRP(maxMrp);

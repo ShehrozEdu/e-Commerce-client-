@@ -1,12 +1,9 @@
 import React, { useState } from "react";
-
 import { useSelector } from "react-redux";
 import ButtonPagination from "./ButtonPagination";
 import CartItem from "./CartItem";
 import OrderButton from "./OrderButton";
 import TotalView from "./TotalView";
-import { post } from "../../utils/paytm";
-import { payUsingPaytm } from "../Users/api";
 
 export default function Cart() {
   const { cartItems } = useSelector((state) => state.cart);
