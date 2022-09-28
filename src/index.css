@@ -552,6 +552,17 @@ Media Queries for small screen
   border-bottom: 1px solid rgba(128, 128, 128, 0.607);
   margin-left: 2px;
 }
+.empty-cart-sec {
+  height: 75vh;
+}
+.empty-cart {
+  margin-top: 2rem;
+  background-color: white;
+}
+.empty-cart-image {
+  height: 13rem;
+  width: 17rem;
+}
 
 .place-order {
   background-color: #fb641b;

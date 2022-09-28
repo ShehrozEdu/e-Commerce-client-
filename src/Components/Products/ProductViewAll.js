@@ -28,9 +28,7 @@ export default function ProductViewAll() {
                       <Link to={`/product-overview/${item._id}`}>
                         <img src={item.url} alt="" />
                       </Link>
-                      <strong className="mb-0 mt-4">
-                        {item.title.shortTitle}
-                      </strong>
+                      <strong className="mb-0 mt-4">{item.shortTitle}</strong>
                       <p className="text-success m-0 mt-1 small">
                         {item.discount}
                       </p>

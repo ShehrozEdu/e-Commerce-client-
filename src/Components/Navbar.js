@@ -92,20 +92,18 @@ export default function Navbar() {
               <ul className=" custom-suggestion position-absolute">
                 {products
                   .filter((product) =>
-                    product.title.longTitle
-                      .toLowerCase()
-                      .includes(text.toLowerCase())
+                    product.longTitle.toLowerCase().includes(text.toLowerCase())
                   )
                   .map((products, index) => {
                     return (
                       <Link
                         to={`/product-overview/${products._id}`}
-                        onClick={() => setText(products.title.longTitle)}
+                        onClick={() => setText(products.longTitle)}
                       >
-                        {text === products.title.longTitle ? null : (
+                        {text === products.longTitle ? null : (
                           <li className="list-group-item small" key={index}>
                             <SearchOutlinedIcon className="text-muted me-2" />
-                            {products.title.longTitle}
+                            {products.longTitle}
                           </li>
                         )}
                       </Link>
@@ -303,10 +301,12 @@ export default function Navbar() {
                     className="fa fa-shopping-cart me-2 position-relative"
                     aria-hidden="true"
                   >
-                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-width ">
-                      {cartItems.length}
-                      <span class="visually-hidden">unread messages</span>
-                    </span>
+                    {cartItems.length !== 0 ? (
+                      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-width ">
+                        {cartItems.length}
+                        <span class="visually-hidden">unread messages</span>
+                      </span>
+                    ) : null}
                   </i>
                   Cart
                 </Link>

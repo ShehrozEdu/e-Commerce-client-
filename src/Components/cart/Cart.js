@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import ButtonPagination from "./ButtonPagination";
 import CartItem from "./CartItem";
 import OrderButton from "./OrderButton";
@@ -13,7 +14,7 @@ export default function Cart() {
 
   return (
     <>
-      {cartItems ? (
+      {cartItems.length !== 0 ? (
         <div className="container cart-section mt-3">
           <div className="row">
             <div className="col-lg-8 col-sm-12 ">
@@ -61,7 +62,20 @@ export default function Cart() {
           <OrderButton totalPrice={totalPrice} />
         </div>
       ) : (
-        <div>EMpty</div>
+        <section className="d-flex justify-content-center empty-cart-sec">
+          <div className="empty-cart shadow col-11 d-flex flex-column align-items-center justify-content-center">
+            <img
+              src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+              alt=""
+              className="empty-cart-image "
+            />
+            <h4 className="mt-2">Your cart is empty!</h4>
+            <p>Add items to it now</p>
+            <Link to={"/product-list"}>
+              <button className="btn btn-primary px-5">Shop Now</button>
+            </Link>
+          </div>
+        </section>
       )}
     </>
   );
