@@ -4,8 +4,8 @@ import ProductsSlide from "./ProductsSlide";
 export default function AdvSlide({ products }) {
   return (
     <>
-      <div className="row mx-lg-1">
-        <div className="col-lg-10 col-md-9 col-sm-12">
+      <div className="row mx-lg-1 p-0 adv-main">
+        <div className="col-lg-10 col-md-9 col-sm-12 ">
           <ProductsSlide
             time={true}
             title="Deal of the day"

@@ -17,6 +17,7 @@ export default function ProductsDetails() {
 
   useEffect(() => {
     dispatch(getProductsDetails(id));
+    window.scrollTo(0, 0);
   }, [dispatch, id]);
 
   return (
@@ -104,7 +105,7 @@ export default function ProductsDetails() {
                   <p className="text-muted"> Delivery</p>
                   <hr />
                   <p className="text-muted"> Warranty</p>
-                  <hr />
+                  <hr className="mt-lg-0 mt-md-0 marWarranty" />
                   <p className="text-muted"> Seller</p>
                   <br />
                   <br />

@@ -163,6 +163,9 @@ BelowNavbar
   cursor: pointer;
   text-align: center;
 }
+.custom-product-image {
+  height: 50vh !important;
+}
 
 /* 
 --------------------------------
@@ -277,14 +280,12 @@ CartFooter
 }
 .adv-img-width {
   width: 15vw;
-  height: 65vh;
+  height: 59vh;
 }
 .adv-img-box {
   height: 61vh;
 }
-.adv-img-width {
-  height: 59vh;
-}
+
 /* /////////// */
 
 .product-list img {
@@ -606,4 +607,168 @@ Media Queries for small screen
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+@media only screen and (max-width: 450px) {
+  .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  .filpkart-icon {
+    width: 12vw;
+    height: auto;
+  }
+
+  .hover-anchor-underline {
+    font-size: 1.3vw;
+    margin-left: 1.3rem;
+  }
+
+  .width-Searchbar {
+    width: 45%;
+  }
+
+  .search-Bar-shadow {
+    margin: 0 !important;
+    padding: 0.3rem !important;
+    /* width: 0vw !important; */
+  }
+
+  .navbar-toggler {
+    margin-left: 3rem;
+    display: flex;
+    flex-direction: column;
+    border: 0;
+  }
+
+  .margin-nav {
+    margin-left: 0 !important;
+  }
+
+  .margin-icons {
+    margin-left: 40vw;
+    margin-top: 0.7rem;
+    font-size: 1rem !important;
+  }
+  .test-fixed {
+    position: static !important;
+  }
+  .dropdown-content {
+    right: 0 !important;
+    box-shadow: #454d5e !important;
+
+    position: absolute;
+  }
+
+  .below-navbar-img {
+    height: 6vh !important;
+  }
+
+  .below-navbar-img img {
+    height: 9vh;
+    width: 7vw;
+    margin-left: 0 !important;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  .belowNavP-text {
+    /* margin-left: 20px; */
+    font-size: 0.5rem;
+  }
+
+  .footer-last-font {
+    font-size: 10px;
+  }
+
+  .footer-img {
+    display: none;
+  }
+
+  .footer-mail {
+    border-left: none;
+  }
+
+  .after-search-Bar-anchor {
+    background-color: #0c73eb;
+  }
+  .banner-img {
+    width: 90vw;
+    height: 10vh;
+  }
+  .banner-below {
+    width: 50%;
+  }
+  .banner-img-1 {
+    width: 110vw;
+    height: 18vh;
+  }
+  .view-btn-width {
+    width: 25vw !important;
+  }
+  .productCarousel-img {
+    width: 25vw;
+    height: 12vh;
+    cursor: pointer !important;
+  }
+  .product-text {
+    font-size: 12px !important;
+  }
+  .best-of-font {
+    font-size: 1rem;
+  }
+  .clock {
+    margin-left: 2rem;
+  }
+  .custom-product-image {
+    height: 60vh;
+    width: 100%;
+  }
+  .adv-img-box {
+    width: 24vw !important;
+    height: 57vh;
+    display: none;
+  }
+  .adv-img-width {
+    width: 100% !important;
+    height: 50vh;
+  }
+  .login-img {
+    width: 25vw;
+    height: 20vh;
+  }
+  .Login-email-logo {
+    margin-top: 2rem !important;
+  }
+  .belowNavProduct {
+    height: 2rem !important;
+  }
+  .font-product-btn {
+    font-size: 0.7rem;
+  }
+  .below-navbar {
+    display: none;
+  }
+  .custom-product-image {
+    width: 61vw;
+    height: 35vh !important;
+  }
+  .custom-suggestion {
+    left: 5rem !important;
+    width: 53vw !important;
+  }
+  .electronicsCarousel-img {
+    width: 30vw !important;
+    height: 15vh;
+  }
+  .marWarranty {
+    margin-top: 37px !important;
+  }
+  .viewAllProducts {
+    width: 45vw !important;
+  }
+  .viewAllProducts img {
+    width: 100px !important;
+    height: 100px !important;
+  }
 }

@@ -12,7 +12,7 @@ export default function ProductViewAll() {
         <div>
           <div className="d-flex justify-content-center border-bottom border-muted">
             <div className="d-flex flex-column align-items-center p-4 ">
-              <h4 className="fw-bold">Best of Electronics</h4>
+              <h4 className="fw-bold">Deal of the Day</h4>
               <p className="text-muted">Items {products.length}</p>
             </div>
           </div>
@@ -22,7 +22,7 @@ export default function ProductViewAll() {
                 {products.map((item, index) => {
                   return (
                     <div
-                      className="align-items-center d-flex flex-column w-25 mt-5 "
+                      className="align-items-center d-flex flex-column w-25 mt-5 viewAllProducts"
                       key={index}
                     >
                       <Link to={`/product-overview/${item._id}`}>
