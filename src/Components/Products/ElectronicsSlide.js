@@ -61,7 +61,7 @@ export default function ElectronicsSlide({ electronics }) {
                   <div className="w-75 h-50">
                     <img
                       src={product.url}
-                      className=" mt-0 electronicsCarousel-img"
+                      className=" mt-0 productCarousel-img"
                       alt=""
                     />
                   </div>

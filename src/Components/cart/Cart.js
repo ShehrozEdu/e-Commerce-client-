@@ -49,7 +49,7 @@ export default function Cart() {
             </div>
 
             {/* right  */}
-            <div className="col-lg-4 col-sm-12   price-detail   mt-sm-1 mt-xs-4 ">
+            <div className="col-lg-4 col-sm-12  position-sticky  price-detail   mt-sm-1 mt-xs-4 ">
               <TotalView
                 cartItems={cartItems}
                 totalPrice={totalPrice}

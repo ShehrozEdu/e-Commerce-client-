@@ -56,7 +56,7 @@ export default function Navbar() {
       />
       <nav className="navbar navbar-expand-lg navbar-light nav-blue nav-height navbar-fixed">
         <div className="container-fluid m-0 p-0 d-flex">
-          <div className="d-flex  flex-column me-2 margin-nav ms-md-0 ms-3">
+          <div className="d-flex flex-column me-2 margin-nav ms-md-0 ms-3">
             <Link to="/" className="navbar-brand pb-0 ">
               <img
                 src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/flipkart-plus_8d85f4.png"
@@ -230,7 +230,7 @@ export default function Navbar() {
               {/* /////////////// seller //////////////// */}
 
               <li className="nav-item ">
-                <a className="nav-link text-light fw-bold" href="#">
+                <a className="nav-link text-light fw-bold ms-2" href="#">
                   Become a Seller
                 </a>
               </li>
