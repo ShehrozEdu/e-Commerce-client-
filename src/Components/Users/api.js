@@ -26,7 +26,7 @@ export const getProductById = async (id) => {
   }
 };
 
-export const payment = async (data) => {
+export const payUsingPaytm = async (data) => {
   try {
     let response = await axios.post(`${URL}/payment`, data);
     return response.data;
