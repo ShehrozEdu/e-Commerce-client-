@@ -269,6 +269,7 @@ CartFooter
 }
 
 .productCarousel-img {
+  object-fit: contain;
   width: 11vw;
   height: 22vh;
   cursor: pointer !important;
@@ -778,6 +779,11 @@ MOBILE SCREEN MEDIA BREAKPOINTS
     width: 100px !important;
     height: 100px !important;
   }
+  .order-btn {
+    position: sticky !important;
+    top: 2.1rem;
+    width: 25rem;
+  }
 }
 /* ------------------------------------------------------------------
 
@@ -785,7 +791,7 @@ TABLET SCREEN MEDIA BREAKPOINTS
 
 ------------------------------------------------------------------*/
 
-@media only screen and (min-width: 501px) and (max-width: 700px) {
+@media only screen and (min-width: 500px) and (max-width: 700px) {
   .navbar-brand {
     margin-left: 1rem !important;
   }
@@ -951,13 +957,18 @@ TABLET SCREEN MEDIA BREAKPOINTS
   .order-btn {
     position: sticky !important;
     top: 2.1rem;
-    width: 32.2rem;
+    width: 100% !important;
   }
 }
 
 @media only screen and (min-width: 701px) and (max-width: 990px) {
   .navbar-brand {
     margin-left: 1rem !important;
+  }
+  .order-btn {
+    position: sticky !important;
+    top: 2.1rem;
+    width: 100% !important;
   }
 
   .filpkart-icon {
@@ -1129,7 +1140,14 @@ TABLET SCREEN MEDIA BREAKPOINTS
   .navbar-brand {
     margin-left: 1rem !important;
   }
-
+  .order-btn {
+    position: sticky !important;
+    top: 2.1rem;
+    width: 100% !important;
+  }
+  .price-detail {
+    right: 1rem;
+  }
   .filpkart-icon {
     width: 8vw;
     margin-left: 0.5rem;
@@ -1304,5 +1322,10 @@ TABLET SCREEN MEDIA BREAKPOINTS
   .viewAllProducts img {
     width: 100px !important;
     height: 100px !important;
+  }
+}
+@media only screen and (min-width: 1200px) and (max-width: 1309px) {
+  .price-detail {
+    right: 1.8rem;
   }
 }

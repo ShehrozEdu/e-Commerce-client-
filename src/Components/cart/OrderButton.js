@@ -1,8 +1,14 @@
 import React from "react";
 import StripeCheckout from "react-stripe-checkout";
+import { payment } from "../Users/api";
 export default function OrderButton({ totalPrice }) {
-  let onToken = (token) => {
-    console.log(token);
+  let paymentStripe = async () => {
+    let { data } = await payment();
+
+    return data;
+  };
+  let onToken = () => {
+    paymentStripe();
   };
   return (
     <>
