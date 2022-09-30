@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { removeFromCart, addToCart } from "../../Redux/Actions/CartAction";
 
 export default function ButtonPagination({
@@ -23,12 +24,19 @@ export default function ButtonPagination({
     // dispatch(addToCart());
   };
 
-  const itemRemove = (_id) => {
-    dispatch(removeFromCart(_id));
+  const itemRemove = (item) => {
+    dispatch(removeFromCart(item._id));
+    toast.success(`Successfully removed${item.longTitle} from your cart`, {
+      position: "bottom-center",
+      autoClose: 4000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
   };
-  // useEffect(() => {
-  //   setItemsValue(itemsValue);
-  // }, [itemsValue]);
 
   return (
     <>
@@ -97,10 +105,21 @@ export default function ButtonPagination({
         <div className="mt-1 ">
           <span
             className="mx-2  text-dark  text-center small remove-item "
-            onClick={() => itemRemove(item._id)}
+            onClick={() => itemRemove(item)}
           >
-            Remove
+            REMOVE
           </span>
+          <ToastContainer
+            position="bottom-center"
+            autoClose={4000}
+            hideProgressBar
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+            pauseOnHover
+          />
         </div>
       </div>
     </>

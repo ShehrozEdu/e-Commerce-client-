@@ -31,7 +31,7 @@ export default function Cart() {
               </div>
 
               {/* left-cart */}
-              <div className="col-lg-12 col-sm-12 mb-5  mt-2">
+              <div className="col-lg-12 col-sm-12 mb-5 border  mt-2">
                 <div className="cart-product ">
                   {cartItems.map((item, index) => (
                     <>

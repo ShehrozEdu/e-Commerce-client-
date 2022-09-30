@@ -6,7 +6,7 @@ export default function OrderButton({ totalPrice }) {
   };
   return (
     <>
-      <div className="col-lg-8 col-md-12 col-sm-12 bottom-0 bg-light py-3  d-flex justify-content-end align-items-center order-btn">
+      <div className="col-lg-8 col-md-12 col-sm-12 bottom-0 bg-light position-fixed py-3  d-flex justify-content-end align-items-center order-btn">
         <StripeCheckout
           token={onToken}
           amount={totalPrice * 100}

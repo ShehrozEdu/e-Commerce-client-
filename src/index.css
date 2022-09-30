@@ -573,6 +573,7 @@ Media Queries for small screen
   border-top: 1px solid #f0f0f0;
   box-shadow: 0 -2px 10px 0 rgba(0, 0, 0, 0.293);
   margin-top: 5vh;
+  width: 53.5rem;
 }
 .order-btn button {
   padding: 15px 30px;
@@ -581,7 +582,7 @@ Media Queries for small screen
 .price-detail {
   background-color: white;
   top: 12%;
-  right: 10%;
+  right: 5rem;
   height: 100%;
 }
 .price-head {
@@ -605,6 +606,9 @@ Media Queries for small screen
   -moz-user-select: none; /* Old versions of Firefox */
   -ms-user-select: none; /* Internet Explorer/Edge */
   user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+.fs-7 {
+  font-size: 0.9rem;
 }
 
 /* ------------------------------------------------------------------
@@ -943,6 +947,11 @@ TABLET SCREEN MEDIA BREAKPOINTS
   .viewAllProducts img {
     width: 100px !important;
     height: 100px !important;
+  }
+  .order-btn {
+    position: sticky !important;
+    top: 2.1rem;
+    width: 32.2rem;
   }
 }
 
