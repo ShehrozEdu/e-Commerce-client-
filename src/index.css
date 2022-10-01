@@ -28,6 +28,12 @@ body {
   background-color: #0c73eb !important;
 }
 
+.dropdown:hover .iconDown {
+  transform: rotateX(180deg);
+}
+.icon-main:hover .iconDown {
+  transform: rotateX(180deg);
+}
 .margin-nav {
   margin-left: 11rem !important;
 }

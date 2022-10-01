@@ -35,7 +35,7 @@ export default function OrderButton({ totalPrice }) {
       key: process.env.REACT_APP_KEY_ID,
       amount: order.amount,
       currency: "INR",
-      name: "Zomato Clone Payment",
+      name: "Product Payment",
       description: "Food Payment",
       image:
         "https://upload.wikimedia.org/wikipedia/commons/2/2d/Zomato_Logo.jpg",

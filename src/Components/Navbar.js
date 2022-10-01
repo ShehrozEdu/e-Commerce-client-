@@ -239,7 +239,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <div className="dropdown" style={{ float: "left " }}>
                   <button className="btn  text-light fw-bold dropbtn">
-                    More <KeyboardArrowDownOutlinedIcon />
+                    More <KeyboardArrowDownOutlinedIcon className="iconDown" />
                   </button>
                   <div className="dropdown-content" style={{ left: -90 }}>
                     <ul className="list-group position-absolute">
