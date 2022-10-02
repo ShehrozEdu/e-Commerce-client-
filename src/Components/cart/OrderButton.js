@@ -22,7 +22,7 @@ export default function OrderButton({ totalPrice, cartItems }) {
       return false;
     }
 
-    let URL = "http://localhost:7000/api/payment";
+    let URL = "https://flipkart-clone-532.herokuapp.com/api/payment";
 
     let sendData = {
       amount: totalPrice,
@@ -42,7 +42,7 @@ export default function OrderButton({ totalPrice, cartItems }) {
         "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png",
       order_id: order.id,
       handler: async function (response) {
-        let URL = "http://localhost:7000/api/callback";
+        let URL = "https://flipkart-clone-532.herokuapp.com/api/callback";
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,

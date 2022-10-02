@@ -423,6 +423,7 @@ Media Queries for small screen
   .custom-product-image {
     height: 60vh;
     width: 100%;
+    object-fit: contain;
   }
   .adv-img-box {
     width: 24vw !important;
@@ -977,7 +978,9 @@ TABLET SCREEN MEDIA BREAKPOINTS
     top: 2.1rem;
     width: 100% !important;
   }
-
+  .cart-btn {
+    /* padding: 2rem !important; */
+  }
   .filpkart-icon {
     width: 10vw;
     height: auto;
@@ -1092,7 +1095,8 @@ TABLET SCREEN MEDIA BREAKPOINTS
   }
   .custom-product-image {
     height: 60vh;
-    width: 100%;
+    width: 35vw;
+    object-fit: contain;
   }
   .adv-img-box {
     width: 24vw !important;
@@ -1119,10 +1123,6 @@ TABLET SCREEN MEDIA BREAKPOINTS
   .below-navbar {
     display: none;
   }
-  .custom-product-image {
-    width: 45vw;
-    height: 40vh !important;
-  }
 
   .custom-suggestion {
     left: 14.3rem !important;
@@ -1143,7 +1143,7 @@ TABLET SCREEN MEDIA BREAKPOINTS
     height: 100px !important;
   }
 }
-@media only screen and (min-width: 991px) and (max-width: 1047px) {
+@media only screen and (min-width: 991px) and (max-width: 1200px) {
   .navbar-brand {
     margin-left: 1rem !important;
   }
