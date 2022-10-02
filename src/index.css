@@ -298,6 +298,7 @@ CartFooter
 .product-list img {
   height: 200px;
   width: 200px;
+  object-fit: contain;
 }
 
 /* 

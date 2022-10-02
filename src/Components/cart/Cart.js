@@ -59,7 +59,7 @@ export default function Cart() {
               />
             </div>
           </div>
-          <OrderButton totalPrice={totalPrice} />
+          <OrderButton cartItems={cartItems} totalPrice={totalPrice} />
         </div>
       ) : (
         <section className="d-flex justify-content-center empty-cart-sec">

@@ -1,7 +1,7 @@
 import React from "react";
 import Swal from "sweetalert2";
 import axios from "axios";
-export default function OrderButton({ totalPrice }) {
+export default function OrderButton({ totalPrice, cartItems }) {
   //Payment
   let loadScript = async () => {
     const scriptElement = document.createElement("script");
@@ -30,15 +30,16 @@ export default function OrderButton({ totalPrice }) {
 
     let { data } = await axios.post(URL, sendData);
     let { order } = data;
+
     // console.log(data);
     var options = {
       key: process.env.REACT_APP_KEY_ID,
       amount: order.amount,
       currency: "INR",
-      name: "Product Payment",
-      description: "Food Payment",
+      name: "Product Payment Confirmation",
+      description: "Payment for the Product",
       image:
-        "https://upload.wikimedia.org/wikipedia/commons/2/2d/Zomato_Logo.jpg",
+        "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png",
       order_id: order.id,
       handler: async function (response) {
         let URL = "http://localhost:7000/api/callback";
