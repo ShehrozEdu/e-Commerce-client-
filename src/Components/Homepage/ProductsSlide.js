@@ -66,7 +66,7 @@ export default function ProductsSlide({ time, title, products }) {
           containerClass="carousel-container"
           showIndicators={true}
         >
-          {products.map((product) => {
+          {products?.map((product) => {
             return (
               <Link to={`/product-overview/${product._id}`}>
                 <div className="p-3 d-flex flex-column align-items-center">

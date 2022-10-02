@@ -54,7 +54,7 @@ export default function ElectronicsSlide({ electronics }) {
           showDots={false}
           containerClass="carousel-container"
         >
-          {electronics.map((product) => {
+          {electronics?.map((product) => {
             return (
               <Link to={`/electronics-overview/${product._id}`}>
                 <div className="p-3 d-flex flex-column align-items-center ">
