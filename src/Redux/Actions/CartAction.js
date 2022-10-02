@@ -1,6 +1,6 @@
 import axios from "axios";
 import * as actionType from "../Constants/CartConstants";
-const URL = "http://localhost:7000/api";
+const URL = "https://flipkart-clone-532.herokuapp.com";
 
 export const addToCart = (id, quantity) => async (dispatch) => {
   try {

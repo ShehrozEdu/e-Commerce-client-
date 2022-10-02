@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let URL = "http://localhost:7000/api";
+let URL = "https://flipkart-clone-532.herokuapp.com";
 
 export const authenticateSignup = async (user) => {
   try {
