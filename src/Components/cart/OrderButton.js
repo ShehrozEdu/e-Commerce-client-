@@ -73,7 +73,7 @@ export default function OrderButton({ totalPrice, cartItems }) {
   };
   return (
     <>
-      <div className="col-lg-8 col-md-12 col-sm-12 bottom-0 bg-light position-fixed py-3  d-flex justify-content-end align-items-center order-btn">
+      <div className="col-lg-8 col-5 bottom-0 bg-light position-fixed py-3  d-flex justify-content-end align-items-center order-btn">
         <button
           type="button"
           className=" btn  place-order text-white fw-bold"

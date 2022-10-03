@@ -84,15 +84,15 @@ export default function CartButtons({ product }) {
   };
   return (
     <>
-      <div className="d-flex justify-content-center mt-3">
+      <div className="d-flex justify-content-evenly mt-3 col-12">
         <button
-          className="btn  py-3 px-2 font-product-btn cart-btn"
+          className="btn col-lg-4 col-md-4 col-5 py-lg-3 font-product-btn  py-2 cart-btn"
           onClick={() => addItemToCart()}
         >
           <i class="fa-solid fa-cart-shopping me-2"></i>ADD TO CART
         </button>
         <button
-          className="btn text-light ms-5 px-3 font-product-btn bolt-btn"
+          className="btn col-lg-4 col-5 text-light  px-3 font-product-btn bolt-btn"
           onClick={makePayment}
         >
           <i class="fa-solid fa-bolt me-2"></i>BUY NOW

@@ -4,7 +4,7 @@ import ProductsSlide from "./ProductsSlide";
 export default function AdvSlide({ products }) {
   return (
     <>
-      <div className="row mx-lg-1 p-0 adv-main">
+      <div className="mx-lg-1 row p-0 adv-main overflow-hidden">
         <div className="col-lg-10 col-md-9 col-sm-12 ">
           <ProductsSlide
             time={true}

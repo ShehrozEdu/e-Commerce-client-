@@ -15,7 +15,7 @@ export default function Cart() {
   return (
     <>
       {cartItems.length !== 0 ? (
-        <div className="container cart-section mt-3">
+        <div className="container cart-section mt-3 col-12">
           <div className="row">
             <div className="col-lg-8 col-sm-12 ">
               <div className="cart-header  d-flex  fw-bold ">
@@ -25,13 +25,13 @@ export default function Cart() {
               </div>
               <div className="cart-header mt-2 d-flex justify-content-between align-items-center bg-white">
                 <p className="m-2 fw-normal">From Saved Addresses</p>
-                <button className="border border-primary p-2 fs-6 m-2 bg-white text-primary fw-normal">
+                <button className="border border-primary p-lg-2 p-0 fs-6 m-2 bg-white text-primary fw-normal">
                   Enter Delivery Pincode
                 </button>
               </div>
 
               {/* left-cart */}
-              <div className="col-lg-12 col-sm-12 mb-5 border  mt-2">
+              <div className="col-lg-12 col-12 mb-5 border  mt-2">
                 <div className="cart-product ">
                   {cartItems.map((item, index) => (
                     <>
