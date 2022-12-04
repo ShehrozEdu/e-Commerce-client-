@@ -1,6 +1,6 @@
 import axios from "axios";
 
-let URL = "https://flipkart-clone-532.herokuapp.com";
+let URL = "https://e-commerce-server-pied.vercel.app/api";
 
 export const authenticateSignup = async (user) => {
   try {

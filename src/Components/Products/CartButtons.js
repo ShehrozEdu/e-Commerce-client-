@@ -33,7 +33,7 @@ export default function CartButtons({ product }) {
       return false;
     }
 
-    let URL = "https://flipkart-clone-532.herokuapp.com/api/payment";
+    let URL = "https://e-commerce-server-pied.vercel.app/api/payment";
 
     let sendData = {
       amount: product.cost,
@@ -53,7 +53,7 @@ export default function CartButtons({ product }) {
         "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png",
       order_id: order.id,
       handler: async function (response) {
-        let URL = "https://flipkart-clone-532.herokuapp.com/api/callback";
+        let URL = "https://e-commerce-server-pied.vercel.app/api/callback";
         let sendData = {
           payment_id: response.razorpay_payment_id,
           order_id: response.razorpay_order_id,

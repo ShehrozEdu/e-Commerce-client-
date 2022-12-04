@@ -11,7 +11,7 @@ import {
 } from "../Constants/UserConstants";
 
 export const login = (email, password) => async (dispatch) => {
-  const URL = "https://flipkart-clone-532.herokuapp.com/api";
+  const URL = "https://e-commerce-server-pied.vercel.app/api";
   try {
     dispatch({
       type: USER_LOGIN_REQUEST,
