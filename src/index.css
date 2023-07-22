@@ -159,6 +159,26 @@ a {
 --------------------------------
 BelowNavbar 
 -------------------------------- */
+.item {
+  position: relative; /* Set the container as a positioning context for absolute positioning */
+}
+
+.title-hidden {
+  display: none;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(247, 178, 178, 0.8);
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.item:hover .title-hidden {
+  display: block;
+}
 .belowNavP-text {
   font-size: 0.7rem;
 }
@@ -326,8 +346,9 @@ Media Queries for small screen
 
 .custom-suggestion {
   left: 16.4rem;
-  width: 31.6%;
+  width: 31.1%;
 }
+
 
 .custom-suggestion li {
   cursor: pointer;

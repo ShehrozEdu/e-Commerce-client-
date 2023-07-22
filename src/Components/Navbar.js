@@ -89,27 +89,32 @@ export default function Navbar() {
               <SearchOutlinedIcon className="position-absolute margin-icons bg-light" />
             </div>
             {text && (
-              <ul className=" custom-suggestion position-absolute">
-                {products
-                  .filter((product) =>
-                    product.longTitle.toLowerCase().includes(text.toLowerCase())
-                  )
-                  .map((products, index) => {
-                    return (
-                      <Link
-                        to={`/product-overview/${products._id}`}
-                        onClick={() => setText(products.longTitle)}
-                      >
-                        {text === products.longTitle ? null : (
-                          <li className="list-group-item small" key={index}>
-                            <SearchOutlinedIcon className="text-muted me-2" />
-                            {products.longTitle}
-                          </li>
-                        )}
-                      </Link>
-                    );
-                  })}
-              </ul>
+            <ul className="custom-suggestion position-absolute">
+            {products
+              .filter((product) =>
+                product.longTitle.toLowerCase().includes(text.toLowerCase())
+              )
+              .map((product, index) => (
+                <Link
+                  key={index}
+                  to={`/product-overview/${product._id}`}
+                  onClick={() => setText(product.longTitle)}
+                >
+                  {text === product.longTitle ? null : (
+                    <li className="list-group-item small">
+                      <SearchOutlinedIcon className="text-muted me-2" />
+                      {product.longTitle}
+                    </li>
+                  )}
+                </Link>
+              ))}
+            {products.length > 0 &&
+              products.filter((product) =>
+                product.longTitle.toLowerCase().includes(text.toLowerCase())
+              ).length === 0 && (
+                <li className="list-group-item small">No results found.</li>
+              )}
+          </ul>
             )}
           </form>
           <button
@@ -274,18 +279,16 @@ export default function Navbar() {
                         ></i>
                         Advertise
                       </li>
-                      <li className="list-group-item ">
-                        <Link
-                          to="https://play.google.com/store/apps/details?id=com.flipkart.android"
-                          target="_blank"
-                        >
-                          <i
-                            className="fa fa-download text-primary me-3"
-                            aria-hidden="true"
-                          ></i>
-                          Download App
-                        </Link>
-                      </li>
+                      <li className="list-group-item">
+  <a
+    href="https://play.google.com/store/apps/details?id=com.flipkart.android"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <i className="fa fa-download text-primary me-3" aria-hidden="true"></i>
+    Download App
+  </a>
+</li>
                     </ul>
                   </div>
                 </div>
