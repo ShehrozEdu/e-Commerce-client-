@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import axios from "axios";
 import { addToCart } from "../../Redux/Actions/ElectronicsCartAction.js";
-export default function CartButtons({ electronics }) {
+export default function ElectronicCartButtons({ electronics }) {
   const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
   const dispatch = useDispatch();
