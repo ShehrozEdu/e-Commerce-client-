@@ -1,5 +1,4 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import ButtonPagination from "./ButtonPagination";
 
 export default function CartItem({ item }) {
