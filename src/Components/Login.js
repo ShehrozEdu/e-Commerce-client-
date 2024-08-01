@@ -47,13 +47,12 @@ export default function Login({
     }
   };
 
-  useEffect(() => {
-    let newUser = localStorage.getItem("userInfo");
-    setAccount(newUser);
-    setShowErrorMessage(false); // Reset the error message display whenever the component renders
-    // console.log(newUser);
-    //  setAccount(userName)
-  });
+ useEffect(() => {
+  let newUser = localStorage.getItem("userInfo");
+  setAccount(newUser);
+  setShowErrorMessage(false); // Reset the error message display whenever the component renders
+}, []);
+
 
   return (
     <>
