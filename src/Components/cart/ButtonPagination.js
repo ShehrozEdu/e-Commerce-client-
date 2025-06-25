@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 import { removeFromCart, addToCart } from "../../Redux/Actions/CartAction";
 
 export default function ButtonPagination({
@@ -13,28 +12,45 @@ export default function ButtonPagination({
   // console.log(item);
   let dispatch = useDispatch();
   let _itemsValue = [...itemsValue];
+  
   let dec = () => {
     item.quantity -= 1;
     setItemsValue(_itemsValue);
-  };
-  let inc = () => {
-    let _itemsValue = [...itemsValue];
-    item.quantity += 1;
-    setItemsValue(_itemsValue);
-    // dispatch(addToCart());
-  };
-
-  const itemRemove = (item) => {
-    dispatch(removeFromCart(item._id));
-    toast.success(`Successfully removed${item.longTitle} from your cart`, {
-      position: "bottom-center",
-      autoClose: 4000,
+    
+    toast.info(`📉 Quantity decreased for ${item.shortTitle || item.longTitle}`, {
+      position: "bottom-right",
+      autoClose: 2000,
       hideProgressBar: true,
       closeOnClick: true,
       pauseOnHover: true,
       draggable: true,
-      progress: undefined,
-      theme: "dark",
+    });
+  };
+  
+  let inc = () => {
+    let _itemsValue = [...itemsValue];
+    item.quantity += 1;
+    setItemsValue(_itemsValue);
+    
+    toast.info(`📈 Quantity increased for ${item.shortTitle || item.longTitle}`, {
+      position: "bottom-right",
+      autoClose: 2000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+    });
+  };
+
+  const itemRemove = (item) => {
+    dispatch(removeFromCart(item._id));
+    toast.success(`🗑️ Successfully removed "${item.shortTitle || item.longTitle}" from your cart`, {
+      position: "bottom-right",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
     });
   };
 
@@ -43,8 +59,8 @@ export default function ButtonPagination({
       <div className="cart-pagination d-flex justify-content-start col-12 my-5 noselect">
         <ul className="pagination pagination-sm mx-2">
           {item.quantity === 1 ? (
-            <li className="page-item " aria-current="page">
-              <a className="page-link  rounded-circle">
+            <li className="page-item" aria-current="page">
+              <a className="page-link rounded-circle" style={{ cursor: 'not-allowed', opacity: 0.5 }}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -54,7 +70,7 @@ export default function ButtonPagination({
                   viewBox="0 0 16 16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"
                   />
                 </svg>
@@ -62,11 +78,12 @@ export default function ButtonPagination({
             </li>
           ) : (
             <li
-              className="page-item "
+              className="page-item"
               aria-current="page"
               onClick={() => dec(index)}
+              style={{ cursor: 'pointer' }}
             >
-              <a className="page-link  rounded-circle">
+              <a className="page-link rounded-circle">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
@@ -76,18 +93,18 @@ export default function ButtonPagination({
                   viewBox="0 0 16 16"
                 >
                   <path
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     d="M2 8a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11A.5.5 0 0 1 2 8Z"
                   />
                 </svg>
               </a>
             </li>
           )}
-          <li className="page-item ">
+          <li className="page-item">
             <a className="page-link px-3 mx-2">{item.quantity}</a>
           </li>
-          <li className="page-item" onClick={() => inc(index)}>
-            <a className="page-link  rounded-circle">
+          <li className="page-item" onClick={() => inc(index)} style={{ cursor: 'pointer' }}>
+            <a className="page-link rounded-circle">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="16"
@@ -102,24 +119,14 @@ export default function ButtonPagination({
           </li>
         </ul>
 
-        <div className="mt-1 ">
+        <div className="mt-1">
           <span
-            className="mx-2  text-dark  text-center small remove-item "
+            className="mx-2 text-dark text-center small remove-item"
             onClick={() => itemRemove(item)}
+            style={{ cursor: 'pointer' }}
           >
             REMOVE
           </span>
-          <ToastContainer
-            position="bottom-center"
-            autoClose={4000}
-            hideProgressBar
-            newestOnTop={false}
-            closeOnClick
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-            pauseOnHover
-          />
         </div>
       </div>
     </>

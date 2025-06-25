@@ -1,5 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import "./index.css";
 import ContextApi from "./Components/Context/ContextApi";
 //Components
@@ -27,6 +29,21 @@ function App() {
         <Route path="/product-list" element={<ProductViewAll />} />
         <Route path="/electronics-list" element={<ElectronicsViewAll />} />
       </Routes>
+      
+      {/* Global Toast Container */}
+      <ToastContainer
+        position="bottom-right"
+        autoClose={4000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        style={{ zIndex: 9999 }}
+      />
     </ContextApi>
   );
 }

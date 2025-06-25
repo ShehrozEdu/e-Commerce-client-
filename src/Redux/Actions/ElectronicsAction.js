@@ -1,7 +1,7 @@
 import axios from "axios";
 
 import * as actionTypes from "../Constants/ElectronicsConstants";
-const URL = "https://e-commerce-server-pied.vercel.app/api";
+const URL = "http://localhost:7000/api";
 export const getElectronics = () => async (dispatch) => {
   try {
     let { data } = await axios.get(`${URL}/get-electronics`);

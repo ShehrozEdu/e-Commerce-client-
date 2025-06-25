@@ -11,7 +11,7 @@ import {
 } from "../Constants/UserConstants";
 
 export const login = (email, password) => async (dispatch) => {
-  const URL = "https://e-commerce-server-pied.vercel.app/api";
+  const URL = "http://localhost:7000/api";
   try {
     dispatch({
       type: USER_LOGIN_REQUEST,
