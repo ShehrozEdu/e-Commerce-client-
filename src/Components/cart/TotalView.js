@@ -15,19 +15,35 @@ export default function TotalView({
     totalAmount();
   }, [cartItems, itemsValue]);
 
+  // Helper function to safely get item price
+  const getItemPrice = (item) => {
+    return {
+      cost: item?.price?.cost || item?.cost || 0,
+      mrp: item?.price?.mrp || item?.mrp || 0
+    };
+  };
+
   const totalAmount = () => {
     let totalPrice = cartItems
-      .map((item) => item.quantity * item.cost)
+      .map((item) => {
+        const price = getItemPrice(item);
+        return item.quantity * price.cost;
+      })
       .reduce((ac, cv) => ac + cv, 0);
 
     let maxMrp = cartItems
-      .map((item) => item.quantity * item.mrp)
+      .map((item) => {
+        const price = getItemPrice(item);
+        return item.quantity * price.mrp;
+      })
       .reduce((ac, cv) => ac + cv, 0);
+      
     let disc = maxMrp - totalPrice;
     setTotalMRP(maxMrp);
     setDiscount(disc);
     setTotalPrice(totalPrice);
   };
+
   return (
     <>
       <div className=" col-lg-12 py-2 price-head text-muted">
@@ -36,10 +52,10 @@ export default function TotalView({
 
       <div className="price-section row">
         <div className="col-8 fw-bolder py-2">
-          <p>Price ({cartItems.length} item )</p>
+          <p>Price ({cartItems.length} item{cartItems.length !== 1 ? 's' : ''})</p>
         </div>
         <div className="col-4  py-2">
-          <p>₹ {totalMRP}</p>
+          <p>₹{totalMRP.toLocaleString()}</p>
         </div>
 
         <div className="col-8 fw-bolder py-2">
@@ -47,8 +63,7 @@ export default function TotalView({
         </div>
         <div className="col-4 py-2">
           <p className="text-success">
-            -₹
-            {discount}
+            -₹{discount.toLocaleString()}
           </p>
         </div>
 
@@ -72,11 +87,11 @@ export default function TotalView({
           <p>Total Amount</p>
         </div>
         <div className="col-4 fw-bold fs-5">
-          <p>₹{totalPrice}</p>
+          <p>₹{(totalPrice + 29).toLocaleString()}</p>
         </div>
       </div>
       <div className="col-12 text-success py-3 fw-bolder">
-        <p>You will save ₹{discount} on this order</p>
+        <p>You will save ₹{discount.toLocaleString()} on this order</p>
       </div>
     </>
   );

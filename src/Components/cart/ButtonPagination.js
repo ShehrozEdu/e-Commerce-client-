@@ -6,18 +6,26 @@ import { removeFromCart, addToCart } from "../../Redux/Actions/CartAction";
 export default function ButtonPagination({
   item,
   setItemsValue,
-  itemsValue,
+  itemsValue = [], // Default to empty array to prevent iteration error
   index,
 }) {
   // console.log(item);
   let dispatch = useDispatch();
-  let _itemsValue = [...itemsValue];
+
+  // Helper function to safely get item title
+  const getItemTitle = () => {
+    return item?.title?.shortTitle || item?.title?.longTitle || item?.shortTitle || item?.longTitle || "Product";
+  };
+
+  // Ensure itemsValue is an array before spreading
+  const safeItemsValue = Array.isArray(itemsValue) ? itemsValue : [];
   
   let dec = () => {
+    let _itemsValue = [...safeItemsValue];
     item.quantity -= 1;
     setItemsValue(_itemsValue);
     
-    toast.info(`📉 Quantity decreased for ${item.shortTitle || item.longTitle}`, {
+    toast.info(`📉 Quantity decreased for ${getItemTitle()}`, {
       position: "bottom-right",
       autoClose: 2000,
       hideProgressBar: true,
@@ -28,11 +36,11 @@ export default function ButtonPagination({
   };
   
   let inc = () => {
-    let _itemsValue = [...itemsValue];
+    let _itemsValue = [...safeItemsValue];
     item.quantity += 1;
     setItemsValue(_itemsValue);
     
-    toast.info(`📈 Quantity increased for ${item.shortTitle || item.longTitle}`, {
+    toast.info(`📈 Quantity increased for ${getItemTitle()}`, {
       position: "bottom-right",
       autoClose: 2000,
       hideProgressBar: true,
@@ -44,7 +52,7 @@ export default function ButtonPagination({
 
   const itemRemove = (item) => {
     dispatch(removeFromCart(item._id));
-    toast.success(`🗑️ Successfully removed "${item.shortTitle || item.longTitle}" from your cart`, {
+    toast.success(`🗑️ Successfully removed "${getItemTitle()}" from your cart`, {
       position: "bottom-right",
       autoClose: 4000,
       hideProgressBar: false,

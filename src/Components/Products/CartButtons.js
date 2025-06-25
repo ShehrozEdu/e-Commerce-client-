@@ -14,13 +14,22 @@ export default function CartButtons({ product }) {
   const dispatch = useDispatch();
   const { _id } = product;
 
+  // Helper functions to safely get nested values
+  const getProductTitle = () => {
+    return product?.title?.shortTitle || product?.title?.longTitle || product?.shortTitle || product?.longTitle || "Product";
+  };
+
+  const getProductCost = () => {
+    return product?.price?.cost || product?.cost || 0;
+  };
+
   const addItemToCart = () => {
     try {
       setLoading(true);
       dispatch(addToCart(_id, quantity));
       
       // Success toast
-      toast.success(`🛒 ${product.shortTitle || product.title} added to cart!`, {
+      toast.success(`🛒 ${getProductTitle()} added to cart!`, {
         position: "bottom-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -92,7 +101,7 @@ export default function CartButtons({ product }) {
       let URL = "http://localhost:7000/api/payment";
 
       let sendData = {
-        amount: product.cost,
+        amount: getProductCost(),
       };
 
       let { data } = await axios.post(URL, sendData);
@@ -113,7 +122,7 @@ export default function CartButtons({ product }) {
         amount: order.amount,
         currency: "INR",
         name: "Flipkart Purchase",
-        description: `Payment for ${product.shortTitle || product.title}`,
+        description: `Payment for ${getProductTitle()}`,
         image:
           "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png",
         order_id: order.id,

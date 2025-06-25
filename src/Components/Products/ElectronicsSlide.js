@@ -2,6 +2,7 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import { Link } from "react-router-dom";
 // import Countdown from "react-countdown";
+
 export default function ElectronicsSlide({ electronics }) {
   const responsive = {
     desktop: {
@@ -31,8 +32,7 @@ export default function ElectronicsSlide({ electronics }) {
           <div className="mt-3 d-flex ">
             <div>
               <h5 className="best-of-font">Best in Electronics</h5>
-
-              <h4 className="text-muted small">Best of products</h4>
+              <h4 className="text-muted small">Latest technology & gadgets</h4>
             </div>
           </div>
           <Link to={"/electronics-list"}>
@@ -54,22 +54,22 @@ export default function ElectronicsSlide({ electronics }) {
           showDots={false}
           containerClass="carousel-container"
         >
-          {electronics?.map((product) => {
+          {electronics?.map((product, index) => {
             return (
-              <Link to={`/electronics-overview/${product._id}`}>
+              <Link key={product._id || index} to={`/electronics-overview/${product._id}`}>
                 <div className="p-3 d-flex flex-column align-items-center ">
                   <div className="w-75 h-50">
                     <img
                       src={product.url}
                       className=" mt-0 productCarousel-img"
-                      alt=""
+                      alt={product.title?.shortTitle || product.shortTitle || "Electronics"}
                     />
                   </div>
                   <p className=" mt-3 text-center product-text p-0 m-0">
-                    {product.shortTitle}
+                    {product.title?.shortTitle || product.shortTitle}
                   </p>
                   <p className=" product-text text-success mt-2 small p-0 m-0">
-                    {product.discount}
+                    {product.price?.discount || product.discount}
                   </p>
                   <p className=" mt-2 text-center product-text  mt-2 text-muted small p-0 m-0">
                     {product.tagline}

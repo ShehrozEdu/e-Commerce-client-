@@ -1,39 +1,42 @@
-import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import "./index.css";
-import ContextApi from "./Components/Context/ContextApi";
-//Components
-import Navbar from "./Components/Navbar";
 import Homepage from "./Components/Homepage/Homepage";
+import Login from "./Components/Login";
+import Navbar from "./Components/Navbar";
 import ProductsDetails from "./Components/Products/ProductsDetails";
-import Cart from "./Components/cart/Cart";
 import ProductViewAll from "./Components/Products/ProductViewAll";
-import ElectronicsViewAll from "./Components/Products/ElectronicsViewAll";
 import ElectronicsDetails from "./Components/Products/ElectronicsDetails";
+import ElectronicsViewAll from "./Components/Products/ElectronicsViewAll";
+import Cart from "./Components/cart/Cart";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
-    <ContextApi className="App">
+    <div className="App">
       <Navbar />
-      {/* <Homepage /> */}
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/login" element={<Login />} />
+        
+        {/* Product Routes */}
         <Route path="/product-overview/:id" element={<ProductsDetails />} />
-        <Route
-          path="/electronics-overview/:id"
-          element={<ElectronicsDetails />}
-        />
+        <Route path="/products/category/:category" element={<ProductViewAll />} />
+        <Route path="/products/deals" element={<ProductViewAll />} />
+        <Route path="/products/featured" element={<ProductViewAll />} />
+        <Route path="/product-list" element={<ProductViewAll />} /> {/* Legacy route */}
+        
+        {/* Electronics Routes */}
+        <Route path="/electronics-overview/:id" element={<ElectronicsDetails />} />
+        <Route path="/electronics" element={<ElectronicsViewAll />} />
+        
+        {/* Cart Route */}
         <Route path="/cart" element={<Cart />} />
-        <Route path="/product-list" element={<ProductViewAll />} />
-        <Route path="/electronics-list" element={<ElectronicsViewAll />} />
       </Routes>
       
       {/* Global Toast Container */}
       <ToastContainer
         position="bottom-right"
-        autoClose={4000}
+        autoClose={3000}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -42,9 +45,8 @@ function App() {
         draggable
         pauseOnHover
         theme="light"
-        style={{ zIndex: 9999 }}
       />
-    </ContextApi>
+    </div>
   );
 }
 

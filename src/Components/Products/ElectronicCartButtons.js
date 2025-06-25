@@ -14,13 +14,22 @@ export default function ElectronicCartButtons({ electronics }) {
   const dispatch = useDispatch();
   const { _id } = electronics;
 
+  // Helper functions to safely get nested values
+  const getElectronicsTitle = () => {
+    return electronics?.title?.shortTitle || electronics?.title?.longTitle || electronics?.shortTitle || electronics?.longTitle || "Electronics";
+  };
+
+  const getElectronicsCost = () => {
+    return electronics?.price?.cost || electronics?.cost || 0;
+  };
+
   const addItemToCart = () => {
     try {
       setLoading(true);
       dispatch(addToCart(_id, quantity));
       
       // Success toast
-      toast.success(`🛒 ${electronics.shortTitle || electronics.title} added to cart!`, {
+      toast.success(`🛒 ${getElectronicsTitle()} added to cart!`, {
         position: "bottom-right",
         autoClose: 3000,
         hideProgressBar: false,
@@ -92,7 +101,7 @@ export default function ElectronicCartButtons({ electronics }) {
       let URL = "http://localhost:7000/api/payment";
 
       let sendData = {
-        amount: electronics.cost,
+        amount: getElectronicsCost(),
       };
 
       let { data } = await axios.post(URL, sendData);
@@ -113,7 +122,7 @@ export default function ElectronicCartButtons({ electronics }) {
         amount: order.amount,
         currency: "INR",
         name: "Flipkart Electronics Purchase",
-        description: `Payment for ${electronics.shortTitle || electronics.title}`,
+        description: `Payment for ${getElectronicsTitle()}`,
         image:
           "https://logos-world.net/wp-content/uploads/2020/11/Flipkart-Logo.png",
         order_id: order.id,
@@ -209,9 +218,9 @@ export default function ElectronicCartButtons({ electronics }) {
 
   return (
     <>
-      <div className="d-flex justify-content-center mt-3">
+      <div className="d-flex justify-content-evenly mt-3 col-12">
         <button
-          className="btn py-3 px-2 font-product-btn cart-btn"
+          className="btn col-lg-4 col-md-4 col-5 py-lg-3 font-product-btn py-2 cart-btn"
           onClick={() => addItemToCart()}
           disabled={loading}
         >
@@ -227,7 +236,7 @@ export default function ElectronicCartButtons({ electronics }) {
           )}
         </button>
         <button
-          className="btn text-light ms-5 px-3 font-product-btn bolt-btn"
+          className="btn col-lg-4 col-5 text-light px-3 font-product-btn bolt-btn"
           onClick={makePayment}
           disabled={paymentLoading}
         >

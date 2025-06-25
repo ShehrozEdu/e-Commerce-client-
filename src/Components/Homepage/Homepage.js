@@ -7,21 +7,27 @@ import BelowNavbar from "./BelowNavbar";
 import AdvSlide from "./AdvSlide";
 import ElectronicsSlide from "../Products/ElectronicsSlide";
 
-import { getProducts } from "../../Redux/Actions/ProductAction";
+// Redux imports
+import { getDealProducts, getFashionProducts } from "../../Redux/Actions/ProductAction";
 import { getElectronics } from "../../Redux/Actions/ElectronicsAction";
 import { useDispatch, useSelector } from "react-redux";
 import AdvGrid from "./AdvGrid";
 
 export default function Homepage() {
-  const { products } = useSelector((state) => state.getProduct);
+  const { products: dealProducts } = useSelector((state) => state.getDealProducts);
+  const { products: fashionProducts } = useSelector((state) => state.getFashionProducts);
   const { electronics } = useSelector((state) => state.getElectronics);
-  // console.log(electronics);
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getProducts());
-  }, [dispatch]);
-  useEffect(() => {
+    // Fetch deals (featured products across categories)
+    dispatch(getDealProducts(8)); // Limit to 8 items for "Deal of the day"
+    
+    // Fetch fashion products specifically for homepage
+    dispatch(getFashionProducts(8)); // Limit to 8 items for "Best in Fashion"
+    
+    // Fetch electronics
     dispatch(getElectronics());
   }, [dispatch]);
 
@@ -29,10 +35,26 @@ export default function Homepage() {
     <>
       <BelowNavbar />
       <Banner />
-      <AdvSlide time={true} title="Deal of the day" products={products} />
-      <ElectronicsSlide electronics={electronics} />
+      
+      {/* Deal of the day - Now shows actual deal products */}
+      <AdvSlide 
+        time={true} 
+        title="Deal of the day" 
+        products={dealProducts || []} 
+      />
+      
+      {/* Best in Electronics */}
+      <ElectronicsSlide electronics={electronics || []} />
+      
       <AdvGrid />
-      <ProductsSlide time={false} title="Best in Fashion" products={products} />
+      
+      {/* Best in Fashion - Now shows fashion category products from dedicated slice */}
+      <ProductsSlide 
+        time={false} 
+        title="Best in Fashion" 
+        products={fashionProducts || []} 
+      />
+      
       <AdvGrid />
       <MostSearched />
       <Footer />

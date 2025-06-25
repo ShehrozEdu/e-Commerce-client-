@@ -5,6 +5,7 @@ import ProductBelowNavbar from "./ProductBelowNavbar";
 
 export default function ElectronicsViewAll() {
   const { electronics } = useSelector((state) => state.getElectronics);
+  
   return (
     <>
       <ProductBelowNavbar />
@@ -26,11 +27,13 @@ export default function ElectronicsViewAll() {
                       key={index}
                     >
                       <Link to={`/electronics-overview/${item._id}`}>
-                        <img src={item.url} alt="" />
+                        <img src={item.url} alt={item.title?.shortTitle || item.shortTitle || "Electronics"} />
                       </Link>
-                      <strong className="mb-0 mt-4">{item.shortTitle}</strong>
+                      <strong className="mb-0 mt-4">
+                        {item.title?.shortTitle || item.shortTitle || "Electronics"}
+                      </strong>
                       <p className="text-success m-0 mt-1 small">
-                        {item.discount}
+                        {item.price?.discount || item.discount || "0% off"}
                       </p>
                       <p className="text-muted mt-1 small">{item.tagline}</p>
                     </div>
